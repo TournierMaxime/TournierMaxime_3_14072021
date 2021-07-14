@@ -1,0 +1,219 @@
+
+@import "styles/sass/base/fonts.scss";
+@import "styles/sass/utils/variables.scss";
+@import "styles/sass/utils/animation.scss";
+@import "styles/sass/utils/functions.scss";
+@import "styles/sass/utils/mixins.scss";
+
+html {
+    font-family: Roboto;
+}
+
+body {
+    width: $hundreadPercent;
+    @include flexbox;
+    @include flex-direction(row);
+    margin: $null;
+}
+
+main {
+    margin: $null;
+    @include flexbox; 
+    @include flex-direction(row);
+}
+
+header {
+    box-shadow: $null $null 0.5rem $headerBg;
+    position: relative;
+}
+
+header,
+.explore {
+    width: $hundreadPercent;
+    @include flexbox;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    @include flexbox;
+    align-items: flex-start;
+    background-color: $footerBg;
+    color: white;
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+    margin: $null;
+    padding: $null;
+}
+
+p {
+    margin: 0.5em $null;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.5em $null;
+    padding: $null;
+}
+
+$start: 1.8em; 
+@each $h in h1, h2, h3, h4, h5, h6{
+    #{$h} { 
+      font-size: $start;
+      }
+
+      $start: $start - 0.2;
+  }
+
+.steps {
+    text-align: center;
+}
+
+.step {
+    border-radius: 10em;
+    background-color: $stepBg;
+    margin: 1em $null;
+    padding: 1em;
+}
+
+.iconStep {
+    margin-right: 1em;
+}
+
+.mainTitle {
+    font-family: Shrikhand;
+    font-size: 2em;
+}
+
+.location {
+    background-color: #dfdfdf;
+    width: $hundreadPercent;
+    margin: $null;
+    padding: 1em $null;
+    @include flexbox;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconLocation {
+    margin-right: 1em;
+}
+
+.explore {
+    background-color: #f2f2f2;
+    padding: 2em $null;
+}
+
+.mainParagraphe,
+.mainSubParagraphe {
+    padding: $null 1em;
+}
+
+.mainParagraphe {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.mainSubParagraphe {
+    font-size: 1.2em;
+}
+
+.buttonHeader {
+    border-radius: 10px;
+    font-size: 1em;
+    color: white;
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    padding: 1em;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0.25em 0.25em 1em rgb(0 0 0 / 25%);
+}
+
+.operation,
+.restaurant {
+    @include flexbox;
+    @include flex-direction(column);
+    flex-wrap: wrap;
+    padding: $null 1em;
+}
+
+.headTitleFooter {
+    font-family: Shrikhand;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.liFooter {
+    font-size: 1em;
+    margin: $null.5em $null;
+}
+
+.iconFooter {
+    margin-right: 1em;
+    width: 1em;
+}
+
+.menus {
+    padding: $null;
+}
+
+.menu {
+    margin: 1em $null;
+}
+
+.box {
+    background-color: white;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    position: relative;
+}
+
+img {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    object-fit: cover;
+    width: $hundreadPercent;
+    height: 10em;
+}
+
+.new {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: #99e2d0;
+    color: #1d9e7e;
+    border-radius: $null.2em;
+    padding: $null.5em;
+}
+
+.operation {
+    background-color: white;
+}
+
+.restaurant {
+    background-color: #f2f2f2;
+}
+
+.cardFooter {
+    @include flexbox;
+    justify-content: space-between;
+    margin: $null 1em;
+}
+
+
