@@ -2,12 +2,10 @@
   font-family: Shrikhand;
   src: url("fonts/Shrikhand/Shrikhand-Regular.ttf");
 }
-
 @font-face {
   font-family: Roboto;
   src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
-
 h1 {
   font-size: 1.8em;
   margin: 0.5em 0;
@@ -38,45 +36,37 @@ h6 {
   margin: 0.5em 0;
 }
 
-.like {
-  margin-top: 2em;
-  position: relative;
-  top: -64px;
-  right: 4px;
-}
-
-.like_empty {
+.likeEmpty {
+  content: "";
   position: absolute;
-  right: 20px;
-  top: 100px;
 }
 
-.like_fill::before {
+.likeEmpty:hover {
+  display: none;
+}
+
+.likeFill {
+  position: absolute;
   content: "";
   opacity: 0;
+  transform: scale(1);
 }
 
-.like_fill:hover::before {
+.likeFill:hover {
   opacity: 1;
   background: linear-gradient(175deg, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
 }
 
 .loader {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
@@ -88,7 +78,6 @@ h6 {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-
 .loader_item {
   -webkit-animation: item 2.5s;
           animation: item 2.5s;
@@ -98,19 +87,15 @@ h6 {
   border-radius: 1em;
   margin: 0.5em;
 }
-
 .loader_item_1 {
   background-color: #9356DC;
 }
-
 .loader_item_2 {
   background-color: #FF79DA;
 }
-
 .loader_item_3 {
   background-color: #99E2D0;
 }
-
 .loader_item_0 {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
@@ -121,10 +106,9 @@ h6 {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-
 .loader_item_1 {
-  -webkit-animation-delay: 0.33333s;
-          animation-delay: 0.33333s;
+  -webkit-animation-delay: 0.3333333333s;
+          animation-delay: 0.3333333333s;
   -webkit-animation-direction: normal;
           animation-direction: normal;
   -webkit-animation-fill-mode: backwards;
@@ -132,10 +116,9 @@ h6 {
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
-
 .loader_item_2 {
-  -webkit-animation-delay: 0.66667s;
-          animation-delay: 0.66667s;
+  -webkit-animation-delay: 0.6666666667s;
+          animation-delay: 0.6666666667s;
   -webkit-animation-direction: normal;
           animation-direction: normal;
   -webkit-animation-fill-mode: backwards;
@@ -157,124 +140,87 @@ h6 {
     z-index: -10;
   }
 }
-
 @-webkit-keyframes item {
   0% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   25% {
-    -webkit-transform: translate(0px, 20px);
-            transform: translate(0px, 20px);
+    transform: translate(0px, 20px);
   }
   50% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   75% {
-    -webkit-transform: translate(0px, 20px);
-            transform: translate(0px, 20px);
+    transform: translate(0px, 20px);
   }
   100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
 }
-
 @keyframes item {
   0% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   25% {
-    -webkit-transform: translate(0px, 20px);
-            transform: translate(0px, 20px);
+    transform: translate(0px, 20px);
   }
   50% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
   75% {
-    -webkit-transform: translate(0px, 20px);
-            transform: translate(0px, 20px);
+    transform: translate(0px, 20px);
   }
   100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
   }
 }
-
 html {
   font-family: Roboto;
 }
 
 body {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: normal;
-      align-content: normal;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: normal;
-      -ms-flex-align: normal;
-          align-items: normal;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  flex-wrap: wrap;
   margin: 0 0;
 }
 
 .headerIndex {
   font-family: Shrikhand;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: normal;
-      align-content: normal;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 
 .footer {
-  background-color: #2b2b2b;
+  background-color: #141414;
   color: white;
   padding: 0.5em 0.5em;
 }
-
+.footer a {
+  color: white;
+}
 .footer__ul--headTitle {
   font-family: Shrikhand;
   font-size: 1.2em;
   margin-bottom: 1em;
 }
-
 .footer__ul--li {
   font-size: 1em;
   margin: 0.5em 0;
 }
-
 .footer__ul .footerLink {
   text-decoration: none;
-  color: white;
 }
-
 .footer__ul .footerLink__icon {
   margin-right: 1em;
   width: 1em;
@@ -282,23 +228,12 @@ body {
 
 main {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: normal;
-      align-content: normal;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: normal;
-      -ms-flex-align: normal;
-          align-items: normal;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  flex-wrap: wrap;
 }
 
 .location {
@@ -306,63 +241,37 @@ main {
   width: 100%;
   margin: 0 0;
   padding: 1em 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
 .location__icon {
   margin: 0 1em;
 }
 
 .explore {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: normal;
-      align-content: normal;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
   background-color: #f5f5f5;
   padding: 1em 0;
 }
-
 .explore__button {
   border-radius: 10px;
   font-size: 1em;
   color: white;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   padding: 1em 1em;
   border: none;
-  -webkit-box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
-          box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
   font-weight: bold;
 }
 
@@ -385,28 +294,14 @@ a {
 }
 
 .operation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: normal;
+  align-items: flex-start;
+  flex-wrap: wrap;
   padding: 0 1em;
-  background-color: white;
-  color: black;
 }
-
 .operation__steps {
   width: 100%;
   list-style-type: none;
@@ -414,55 +309,38 @@ a {
   margin: 0 0;
   padding: 0 0;
 }
-
 .operation__steps--step {
   font-style: italic;
   border-radius: 10em;
-  background-color: #adadad;
+  background-color: #dfdfdf;
   color: black;
   margin: 0.5em 0;
   padding: 1em 1em;
 }
-
-.operation__steps a {
+.operation__steps--step a {
   color: black;
 }
-
 .operation .iconStep {
   padding: 0 0.5em;
   margin: 0 0;
 }
 
 .restaurant {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: normal;
-      align-content: normal;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: normal;
-      -ms-flex-align: normal;
-          align-items: normal;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  flex-wrap: wrap;
   padding: 0 1em;
   background-color: #f2f2f2;
 }
-
 .restaurant__menus {
   padding: 0 0;
 }
-
 .restaurant__menus--menu {
   margin: 1em 0;
 }
-
 .restaurant .box {
   background-color: white;
   border-top-left-radius: 1em;
@@ -471,7 +349,6 @@ a {
   border-bottom-right-radius: 1em;
   position: relative;
 }
-
 .restaurant .box__img {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
@@ -480,7 +357,6 @@ a {
   width: 100%;
   height: 10em;
 }
-
 .restaurant .box__new {
   position: absolute;
   top: 1em;
@@ -490,62 +366,17 @@ a {
   border-radius: 0 0.2em;
   padding: 0.5em 0.5em;
 }
-
 .restaurant .box__cardFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: normal;
-      align-content: normal;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: normal;
-      -ms-flex-align: normal;
-          align-items: normal;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  align-content: normal;
+  justify-content: space-between;
+  align-items: normal;
+  flex-wrap: wrap;
   margin: 0 1em;
 }
-
 .restaurant .box__cardFooter--right {
   position: relative;
   top: 0.5em;
   right: 2em;
-}
-
-.restaurant .box__cardFooter--right .likeEmpty {
-  content: "";
-  position: absolute;
-}
-
-.restaurant .box__cardFooter--right .likeEmpty:hover {
-  display: none;
-}
-
-.restaurant .box__cardFooter--right .likeFill {
-  position: absolute;
-  content: "";
-  opacity: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.restaurant .box__cardFooter--right .likeFill:hover {
-  opacity: 1;
-  background: linear-gradient(175deg, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app.css.map */
