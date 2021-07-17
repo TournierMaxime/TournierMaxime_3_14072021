@@ -22,7 +22,7 @@ main {
   background-color: $exploreBg;
   @include paddingYX(1em, 0);
 
-  &__buttonHeader {
+  &__button {
     border-radius: 10px;
     font-size: 1em;
     color: $white;
@@ -50,7 +50,6 @@ p {
 
 a {
   text-decoration: none;
-  color: $white;
 }
 
 .iconStep {
@@ -60,7 +59,7 @@ a {
 .operation {
   @include flexbox(flex, column, center, normal, flex-start, wrap);
   @include paddingYX(0, 1em);
-  background-color: $white;
+  @include backgroundAuto(white);
   &__steps {
     width: 100%;
     list-style-type: none;
@@ -70,9 +69,12 @@ a {
     &--step {
       font-style: italic;
       border-radius: 10em;
-      background-color: $stepBg;
+      @include backgroundAuto($stepBg);
       @include marginYX(0.5em, 0);
       @include paddingYX(1em, 1em);
+    }
+    a {
+      @include a(black);
     }
   }
   .iconStep {
