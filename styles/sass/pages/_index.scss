@@ -1,0 +1,153 @@
+main {
+  margin: $null;
+  @include flexbox(flex, column, normal, normal, normal, wrap);
+}
+
+.location {
+  background-color: #dfdfdf;
+  width: $hundreadPercent;
+  @include marginYX(0, 0);
+  @include paddingYX(1em, 0);
+  @include flexbox(flex, row, center, center, center, wrap);
+
+  &__icon {
+    @include marginYX(0, 1em);
+  }
+}
+
+.explore {
+  width: $hundreadPercent;
+  @include flexbox(flex, column, normal, normal, center, wrap);
+  text-align: center;
+  background-color: $exploreBg;
+  @include paddingYX(1em, 0);
+
+  &__buttonHeader {
+    border-radius: 10px;
+    font-size: 1em;
+    color: $white;
+    background: linear-gradient(
+      0deg,
+      rgba(147, 86, 220, 0.9),
+      rgba(255, 121, 218, 0.9)
+    );
+    @include paddingYX(1em, 1em);
+    border: none;
+    @include box-shadow(0.25em, 0.25em, 0.25em, rgba(0, 0, 0, 0.25));
+    @include font-weight(bold);
+  }
+}
+
+ul {
+  list-style-type: none;
+  @include marginYX(0, 0);
+  @include paddingYX(0, 0);
+}
+
+p {
+  @include marginYX(0.5em, 0);
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.iconStep {
+  margin-right: 1em;
+}
+
+.operation {
+  @include flexbox(flex, column, center, normal, flex-start, wrap);
+  @include paddingYX(0, 1em);
+  background-color: $white;
+  &__steps {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    @include marginYX(0, 0);
+    @include paddingYX(0, 0);
+    &--step {
+      font-style: italic;
+      border-radius: 10em;
+      background-color: $stepBg;
+      @include marginYX(0.5em, 0);
+      @include paddingYX(1em, 1em);
+    }
+  }
+  .iconStep {
+    @include paddingYX(0, 0.5em);
+    @include marginYX(0, 0);
+  }
+}
+
+.restaurant {
+  @include flexbox(flex, column, normal, normal, normal, wrap);
+  @include paddingYX(0, 1em);
+  background-color: #f2f2f2;
+
+  &__menus {
+    @include paddingYX(0, 0);
+    &--menu {
+      @include marginYX(1em, 0);
+    }
+  }
+  .box {
+    background-color: $white;
+    @include border-radius-direction(1em);
+    position: relative;
+
+    &__img {
+      @include border-radius-top(1em);
+      object-fit: cover;
+      width: $hundreadPercent;
+      height: 10em;
+    }
+
+    &__new {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      background-color: #99e2d0;
+      color: #1d9e7e;
+      border-radius: $null.2em;
+      @include paddingYX(0.5em, 0.5em);
+    }
+
+    &__cardFooter {
+      @include flexbox(flex, row, normal, space-between, normal, wrap);
+      @include marginYX(0, 1em);
+
+      &--right {
+        position: relative;
+        top: 0.5em;
+        right: 2em;
+
+        .likeEmpty {
+          content: "";
+          position: absolute;
+        }
+
+        .likeEmpty:hover {
+          display: none;
+        }
+
+        .likeFill {
+          position: absolute;
+          content: "";
+          opacity: 0;
+          transform: scale(1);
+        }
+
+        .likeFill:hover {
+          opacity: 1;
+          background: linear-gradient(175deg, $primaryColor, $secondaryColor);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transform: scale(1.2);
+          transition: transform 0.5s ease;
+        }
+      }
+    }
+  }
+}
