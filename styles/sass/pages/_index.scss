@@ -59,7 +59,6 @@ a {
 .operation {
   @include flexbox(flex, column, center, normal, flex-start, wrap);
   @include paddingYX(0, 1em);
-  @include backgroundAuto(white);
   &__steps {
     width: 100%;
     list-style-type: none;
@@ -69,12 +68,9 @@ a {
     &--step {
       font-style: italic;
       border-radius: 10em;
-      @include backgroundAuto($stepBg);
+      @include backgroundAuto(#dfdfdf);
       @include marginYX(0.5em, 0);
       @include paddingYX(1em, 1em);
-    }
-    a {
-      @include a(black);
     }
   }
   .iconStep {
@@ -124,32 +120,6 @@ a {
         position: relative;
         top: 0.5em;
         right: 2em;
-
-        .likeEmpty {
-          content: "";
-          position: absolute;
-        }
-
-        .likeEmpty:hover {
-          display: none;
-        }
-
-        .likeFill {
-          position: absolute;
-          content: "";
-          opacity: 0;
-          transform: scale(1);
-        }
-
-        .likeFill:hover {
-          opacity: 1;
-          background: linear-gradient(175deg, $primaryColor, $secondaryColor);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          transform: scale(1.2);
-          transition: transform 0.5s ease;
-        }
       }
     }
   }
