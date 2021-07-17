@@ -1,0 +1,53 @@
+@mixin flexbox($display, $direction, $content, $justify, $items, $wrap) {
+  display: $display;
+  flex-direction: $direction;
+  align-content: $content;
+  justify-content: $justify;
+  align-items: $items;
+  flex-wrap: $wrap;
+}
+
+@mixin marginYX($y, $x) {
+  margin: $y $x;
+}
+
+@mixin paddingYX($y, $x) {
+  padding: $y $x;
+}
+
+@mixin all-headings {
+  $base-font-size: 0.8em;
+  $heading-scale: 0.2;
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: $base-font-size + $heading-scale * (6 - $i);
+      @include marginYX(.5em,0);
+    }
+  }
+}
+@include all-headings();
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin border-radius-direction($size) {
+  border-top-left-radius: $size;
+  border-top-right-radius: $size;
+  border-bottom-left-radius: $size;
+  border-bottom-right-radius: $size;
+}
+
+@mixin border-radius-top($size) {
+  border-top-left-radius: $size;
+  border-top-right-radius: $size;
+}
+
+@mixin border-radius-bottom($size) {
+  border-bottom-left-radius: $size;
+  border-bottom-right-radius: $size;
+}
+
+@mixin font-weight($txt) {
+  font-weight: $txt;
+}
