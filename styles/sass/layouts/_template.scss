@@ -8,7 +8,7 @@ body {
   @include marginYX(0, 0);
 }
 
-.header {
+.headerIndex {
   font-family: Shrikhand;
   width: $hundreadPercent;
   @include flexbox(flex, column, normal, normal, center, wrap);
@@ -16,6 +16,8 @@ body {
 }
 
 .footer {
+  @include backgroundAuto($footerBg);
+  @include paddingYX(.5em,.5em);
   &__ul {
     &--headTitle {
       font-family: Shrikhand;
@@ -28,7 +30,7 @@ body {
     }
     .footerLink {
       text-decoration: none;
-      color: white;
+      @include a(white);
       &__icon {
         margin-right: 1em;
         width: 1em;
