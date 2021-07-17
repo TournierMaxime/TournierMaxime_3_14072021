@@ -21,7 +21,7 @@
   @for $i from 1 through 6 {
     h#{$i} {
       font-size: $base-font-size + $heading-scale * (6 - $i);
-      @include marginYX(.5em,0);
+      @include marginYX(0.5em, 0);
     }
   }
 }
@@ -54,18 +54,16 @@
 
 @mixin backgroundAuto($color) {
   @if lightness($color) > 50% {
-    background-color:$color;
-    color:black;
+    background-color: $color;
+    color: black;
+    a {
+      color: black;
+    }
   } @else {
-    background-color:$color;
-    color:white;
-  }
-}
-
-@mixin a($color) {
-  @if lightness($color) > 50% {
-    color:$color;
-  } @else {
-    color:$color;
+    background-color: $color;
+    color: white;
+    a {
+      color: white;
+    }
   }
 }
