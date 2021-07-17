@@ -1,32 +1,28 @@
-.like {
-    margin-top:2em;
-    position:relative;
-    top: -64px;
-    right: 4px;
-    
-      &_empty{
-        position:absolute;
-        right: 20px;
-        top: 100px;
-      }
-    
-       &_fill::before {
-        content:"";
-        opacity:0;
-         
-       }
-    
-       &_fill:hover::before {
-        opacity:1;
-        background: linear-gradient(175deg, $primaryColor, $secondaryColor);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        transition: 0.5s;
-  
-       }
-   
-  }
+.likeEmpty {
+  content: "";
+  position: absolute;
+}
+
+.likeEmpty:hover {
+  display: none;
+}
+
+.likeFill {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transform: scale(1);
+}
+
+.likeFill:hover {
+  opacity: 1;
+  background: linear-gradient(175deg, $primaryColor, $secondaryColor);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
+}
 
   .loader {
       position: fixed;
