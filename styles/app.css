@@ -6,6 +6,36 @@
   font-family: Roboto;
   src: url("fonts/Roboto/Roboto-Regular.ttf");
 }
+h1 {
+  font-size: 1.8em;
+  margin: 0.5em 0;
+}
+
+h2 {
+  font-size: 1.6em;
+  margin: 0.5em 0;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 0.5em 0;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+h5 {
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+h6 {
+  font-size: 0.8em;
+  margin: 0.5em 0;
+}
+
 .like {
   margin-top: 2em;
   position: relative;
@@ -24,6 +54,7 @@
 .like_fill:hover::before {
   opacity: 1;
   background: linear-gradient(175deg, #9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.5s;
@@ -156,23 +187,26 @@ body {
   margin: 0 0;
 }
 
-main {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-content: normal;
-  justify-content: normal;
-  align-items: normal;
-  flex-wrap: wrap;
+.footer__ul--headTitle {
+  font-family: Shrikhand;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.footer__ul--li {
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+.footer__ul .footerLink {
+  text-decoration: none;
+  color: white;
+}
+.footer__ul .footerLink__icon {
+  margin-right: 1em;
+  width: 1em;
 }
 
-header {
-  box-shadow: 0em 0em 0.5em black;
-  position: relative;
-}
-
-header,
-.explore {
+.header {
+  font-family: Shrikhand;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -183,7 +217,7 @@ header,
   text-align: center;
 }
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   align-content: normal;
@@ -193,6 +227,55 @@ footer {
   background-color: #2b2b2b;
   color: white;
   padding: 1em 1em;
+}
+
+main {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  flex-wrap: wrap;
+}
+
+.location {
+  background-color: #dfdfdf;
+  width: 100%;
+  margin: 0 0;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.location__icon {
+  margin: 0 1em;
+}
+
+.explore {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 1em 0;
+}
+.explore__buttonHeader {
+  border-radius: 10px;
+  font-size: 1em;
+  color: white;
+  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  padding: 1em 1em;
+  border: none;
+  box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  font-weight: bold;
 }
 
 ul {
@@ -210,108 +293,39 @@ a {
   color: white;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0.5em 0;
-  padding: 0 0;
-}
-
-h1 {
-  font-size: 1.8em;
-}
-
-h2 {
-  font-size: 1.6em;
-}
-
-h3 {
-  font-size: 1.4em;
-}
-
-h4 {
-  font-size: 1.2em;
-}
-
-h5 {
-  font-size: 1em;
-}
-
-h6 {
-  font-size: 0.8em;
-}
-
-.steps {
-  text-align: center;
-}
-
-.step {
-  border-radius: 10em;
-  background-color: #adadad;
-  margin: 1em 0;
-  padding: 1em 1em;
-}
-
 .iconStep {
   margin-right: 1em;
 }
 
-.mainTitle {
-  font-family: Shrikhand;
-  font-size: 2em;
-}
-
-.location {
-  background-color: #dfdfdf;
-  width: 100%;
-  margin: 0 0;
-  padding: 1em 0;
+.operation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
-  justify-content: center;
-  align-items: center;
+  justify-content: normal;
+  align-items: flex-start;
   flex-wrap: wrap;
-}
-
-.iconLocation {
-  margin: 0 1em;
-}
-
-.explore {
-  background-color: #f2f2f2;
-  padding: 2em 0;
-}
-
-.mainParagraphe,
-.mainSubParagraphe {
   padding: 0 1em;
+  background-color: white;
 }
-
-.mainParagraphe {
-  font-size: 1.8em;
-  font-weight: bold;
+.operation__steps {
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 0;
+  padding: 0 0;
 }
-
-.mainSubParagraphe {
-  font-size: 1.2em;
-}
-
-.buttonHeader {
-  border-radius: 10px;
-  font-size: 1em;
-  color: white;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+.operation__steps--step {
+  font-style: italic;
+  border-radius: 10em;
+  background-color: #adadad;
+  margin: 0.5em 0;
   padding: 1em 1em;
-  border: none;
-  font-weight: bold;
-  box-shadow: 0.25em 0.25em 1em rgba(0, 0, 0, 0.25);
+}
+.operation .iconStep {
+  padding: 0 0.5em;
+  margin: 0 0;
 }
 
-.operation,
 .restaurant {
   display: flex;
   flex-direction: column;
@@ -320,33 +334,15 @@ h6 {
   align-items: normal;
   flex-wrap: wrap;
   padding: 0 1em;
+  background-color: #f2f2f2;
 }
-
-.headTitleFooter {
-  font-family: Shrikhand;
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-.liFooter {
-  font-size: 1em;
-  margin: 0.5em 0;
-}
-
-.iconFooter {
-  margin-right: 1em;
-  width: 1em;
-}
-
-.menus {
+.restaurant__menus {
   padding: 0 0;
 }
-
-.menu {
+.restaurant__menus--menu {
   margin: 1em 0;
 }
-
-.box {
+.restaurant .box {
   background-color: white;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
@@ -354,8 +350,7 @@ h6 {
   border-bottom-right-radius: 1em;
   position: relative;
 }
-
-img {
+.restaurant .box__img {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   -o-object-fit: cover;
@@ -363,8 +358,7 @@ img {
   width: 100%;
   height: 10em;
 }
-
-.new {
+.restaurant .box__new {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -373,21 +367,39 @@ img {
   border-radius: 0 0.2em;
   padding: 0.5em 0.5em;
 }
-
-.operation {
-  background-color: white;
-}
-
-.restaurant {
-  background-color: #f2f2f2;
-}
-
-.cardFooter {
+.restaurant .box__cardFooter {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: normal;
   justify-content: space-between;
   align-items: normal;
   flex-wrap: wrap;
   margin: 0 1em;
-}/*# sourceMappingURL=style.css.map */
+}
+.restaurant .box__cardFooter--right {
+  position: relative;
+  top: 0.5em;
+  right: 2em;
+}
+.restaurant .box__cardFooter--right .likeEmpty {
+  content: "";
+  position: absolute;
+}
+.restaurant .box__cardFooter--right .likeEmpty:hover {
+  display: none;
+}
+.restaurant .box__cardFooter--right .likeFill {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transform: scale(1);
+}
+.restaurant .box__cardFooter--right .likeFill:hover {
+  opacity: 1;
+  background: linear-gradient(175deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
+}/*# sourceMappingURL=app.css.map */
