@@ -1,6 +1,0 @@
-.footer {
-    @include flexbox(flex, column, normal, normal, flex-start, wrap);
-    background-color: $footerBg;
-    color: $white;
-    @include paddingYX(1em, 1em);
-}
