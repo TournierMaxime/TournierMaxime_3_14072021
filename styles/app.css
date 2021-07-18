@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Shrikhand;
   src: url("fonts/Shrikhand/Shrikhand-Regular.ttf");
@@ -36,6 +37,7 @@ h6 {
   margin: 0.5em 0;
 }
 
+/*Ajuste la couleur du texte par rapport à la luminosité du background*/
 .likeEmpty {
   content: "";
   position: absolute;
@@ -180,6 +182,7 @@ html {
 
 body {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-content: normal;
@@ -192,6 +195,7 @@ body {
 .headerIndex {
   font-family: Shrikhand;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-content: normal;
@@ -199,6 +203,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
+  position: relative;
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.25);
 }
 
 .footer {
@@ -211,11 +217,17 @@ body {
 }
 .footer__ul--headTitle {
   font-family: Shrikhand;
+  font-style: normal;
+  font-weight: normal;
   font-size: 1.2em;
+  line-height: 1;
   margin-bottom: 1em;
 }
 .footer__ul--li {
+  font-style: normal;
+  font-weight: normal;
   font-size: 1em;
+  line-height: 1;
   margin: 0.5em 0;
 }
 .footer__ul .footerLink {
@@ -224,10 +236,11 @@ body {
 .footer__ul .footerLink__icon {
   margin-right: 1em;
   width: 1em;
+  height: auto;
 }
 
 main {
-  margin: 0;
+  margin: 0 0;
   display: flex;
   flex-direction: column;
   align-content: normal;
@@ -237,8 +250,10 @@ main {
 }
 
 .location {
-  background-color: #dfdfdf;
+  background-color: #f3f3f3;
+  color: black;
   width: 100%;
+  height: auto;
   margin: 0 0;
   padding: 1em 0;
   display: flex;
@@ -248,12 +263,16 @@ main {
   align-items: center;
   flex-wrap: wrap;
 }
+.location a {
+  color: black;
+}
 .location__icon {
   margin: 0 1em;
 }
 
 .explore {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-content: normal;
@@ -261,18 +280,36 @@ main {
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #fafafa;
+  color: black;
   padding: 1em 0;
 }
+.explore a {
+  color: black;
+}
+.explore__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6em;
+  line-height: 1;
+}
+.explore__subtitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 1;
+}
 .explore__button {
-  border-radius: 10px;
-  font-size: 1em;
+  border-radius: 10em;
   color: white;
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   padding: 1em 1em;
   border: none;
   box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  font-style: normal;
   font-weight: bold;
+  font-size: 1em;
+  line-height: 1;
 }
 
 ul {
@@ -297,28 +334,64 @@ a {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: normal;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 0 1em;
 }
 .operation__steps {
-  width: 100%;
-  list-style-type: none;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: normal;
+  justify-content: normal;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: auto;
+  list-style: none;
+  counter-reset: compteListe;
   margin: 0 0;
   padding: 0 0;
 }
 .operation__steps--step {
-  font-style: italic;
-  border-radius: 10em;
-  background-color: #dfdfdf;
+  position: relative;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
+  background-color: #f6f6f6;
   color: black;
-  margin: 0.5em 0;
-  padding: 1em 1em;
+  margin: 1em 0;
+  padding: 1.5em 1em;
+  width: 90%;
+  height: auto;
 }
 .operation__steps--step a {
   color: black;
+}
+.operation__steps--step::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  position: absolute;
+  left: -1em;
+  border-radius: 100px;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #6100d8;
+  color: white;
+  padding: 0.2em 0.2em;
+  display: flex;
+  flex-direction: row;
+  align-content: normal;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.operation__steps--step::before a {
+  color: white;
+}
+.operation__steps--step span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1;
 }
 .operation .iconStep {
   padding: 0 0.5em;
@@ -332,8 +405,12 @@ a {
   justify-content: normal;
   align-items: normal;
   flex-wrap: wrap;
-  padding: 0 1em;
-  background-color: #f2f2f2;
+  padding: 2em 1em;
+  background-color: #f6f6f6;
+  color: black;
+}
+.restaurant a {
+  color: black;
 }
 .restaurant__menus {
   padding: 0 0;
@@ -362,9 +439,13 @@ a {
   top: 1em;
   right: 1em;
   background-color: #99e2d0;
+  color: black;
   color: #1d9e7e;
-  border-radius: 0 0.2em;
+  border-radius: 0.2em;
   padding: 0.5em 0.5em;
+}
+.restaurant .box__new a {
+  color: black;
 }
 .restaurant .box__cardFooter {
   display: flex;
