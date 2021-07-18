@@ -1,11 +1,11 @@
 main {
-  margin: $null;
+  @include marginYX(0, 0);
   @include flexbox(flex, column, normal, normal, normal, wrap);
 }
 
 .location {
-  background-color: #dfdfdf;
-  width: $hundreadPercent;
+  @include backgroundAuto($colorLocation);
+  @include wh(100%);
   @include marginYX(0, 0);
   @include paddingYX(1em, 0);
   @include flexbox(flex, row, center, center, center, wrap);
@@ -16,15 +16,22 @@ main {
 }
 
 .explore {
-  width: $hundreadPercent;
+  @include wh(100%);
   @include flexbox(flex, column, normal, normal, center, wrap);
   text-align: center;
-  background-color: $exploreBg;
+  @include backgroundAuto($colorExplore);
   @include paddingYX(1em, 0);
 
+  &__title {
+    @include font(normal,bold,1.6em);
+  }
+
+  &__subtitle {
+    @include font(normal,300,1.4em);
+  }
+
   &__button {
-    border-radius: 10px;
-    font-size: 1em;
+    border-radius: 10em;
     color: $white;
     background: linear-gradient(
       0deg,
@@ -34,7 +41,7 @@ main {
     @include paddingYX(1em, 1em);
     border: none;
     @include box-shadow(0.25em, 0.25em, 0.25em, rgba(0, 0, 0, 0.25));
-    @include font-weight(bold);
+    @include font(normal,bold);
   }
 }
 
@@ -57,20 +64,36 @@ a {
 }
 
 .operation {
-  @include flexbox(flex, column, center, normal, flex-start, wrap);
-  @include paddingYX(0, 1em);
+  @include flexbox(flex, column, center, center, flex-start, wrap);
   &__steps {
-    width: 100%;
-    list-style-type: none;
-    text-align: center;
+    @include flexbox(flex, column, normal, normal, center, wrap);
+    @include wh(90%);
+    list-style: none;
+    counter-reset: compteListe;
     @include marginYX(0, 0);
     @include paddingYX(0, 0);
     &--step {
-      font-style: italic;
-      border-radius: 10em;
-      @include backgroundAuto(#dfdfdf);
-      @include marginYX(0.5em, 0);
-      @include paddingYX(1em, 1em);
+      position: relative;
+      border-radius: 0.5em;
+      @include box-shadow(0.2em, 0.2em, 0.5em, rgb(0 0 0 / 30%));
+      @include backgroundAuto($colorOperation);
+      @include marginYX(1em, 0);
+      @include paddingYX(1.5em, 1em);
+      @include wh(90%);
+      &::before {
+        counter-increment: compteListe 1;
+        content: counter(compteListe) " ";
+        position: absolute;
+        left: -1em;
+        border-radius: 100px;
+        @include wh(1.5em, 1.5em);
+        @include backgroundAuto(#6100d8);
+        @include paddingYX(0.2em, 0.2em);
+        @include flexbox(flex, row, normal, center, center, wrap);
+      }
+      span {
+        @include font(normal,bold);
+      }
     }
   }
   .iconStep {
@@ -81,8 +104,8 @@ a {
 
 .restaurant {
   @include flexbox(flex, column, normal, normal, normal, wrap);
-  @include paddingYX(0, 1em);
-  background-color: #f2f2f2;
+  @include paddingYX(2em, 1em);
+  @include backgroundAuto($colorRestaurant);
 
   &__menus {
     @include paddingYX(0, 0);
@@ -98,17 +121,16 @@ a {
     &__img {
       @include border-radius-top(1em);
       object-fit: cover;
-      width: $hundreadPercent;
-      height: 10em;
+      @include wh(100%,10em);
     }
 
     &__new {
       position: absolute;
       top: 1em;
       right: 1em;
-      background-color: #99e2d0;
+      @include backgroundAuto(#99e2d0);
       color: #1d9e7e;
-      border-radius: $null.2em;
+      border-radius: 0.2em;
       @include paddingYX(0.5em, 0.5em);
     }
 
