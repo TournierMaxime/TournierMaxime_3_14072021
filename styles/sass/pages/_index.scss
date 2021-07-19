@@ -75,7 +75,7 @@ a {
     &--step {
       position: relative;
       border-radius: 0.5em;
-      @include box-shadow(0.2em, 0.2em, 0.5em, rgb(0, 0, 0 / 30%));
+      @include box-shadow(0.2em, 0.2em, 0.5em, rgba(0, 0, 0, 0.3));
       @include backgroundAuto($colorOperation);
       @include marginYX(1em, 0);
       @include paddingYX(1.5em, 1em);
