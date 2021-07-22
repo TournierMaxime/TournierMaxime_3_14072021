@@ -1,14 +1,16 @@
 main {
-  @include marginYX(0, 0);
-  @include flexbox(flex, column, normal, normal, normal, wrap);
+  @extend %marginNull;
+  @extend %displayFlex;
+  @include flexbox(column);
 }
 
 .location {
   @include backgroundAuto($colorLocation);
   @include wh(100%);
-  @include marginYX(0, 0);
+  @extend %marginNull;
   @include paddingYX(1em, 0);
-  @include flexbox(flex, row, center, center, center, wrap);
+  @extend %displayFlex;
+  @include flexbox(row, center, center, center);
 
   &__icon {
     @include marginYX(0, 1em);
@@ -17,17 +19,18 @@ main {
 
 .explore {
   @include wh(100%);
-  @include flexbox(flex, column, normal, normal, center, wrap);
+  @extend %displayFlex;
+  @include flexbox(column, center);
   text-align: center;
   @include backgroundAuto($colorExplore);
   @include paddingYX(1em, 0);
 
   &__title {
-    @include font(normal,bold,1.6em);
+    @include font(normal, bold, 1.6em);
   }
 
   &__subtitle {
-    @include font(normal,300,1.4em);
+    @include font(normal, 300, 1.4em);
   }
 
   &__button {
@@ -38,17 +41,18 @@ main {
       rgba(147, 86, 220, 0.9),
       rgba(255, 121, 218, 0.9)
     );
+    @include marginYX(0, 1em);
     @include paddingYX(1em, 1em);
     border: none;
-    @include box-shadow(0.25em, 0.25em, 0.25em, rgba(0, 0, 0, 0.25));
-    @include font(normal,bold);
+    box-shadow: .25em .25em .25em rgba(0, 0, 0, .25);
+    @include font(normal, bold);
   }
 }
 
 ul {
   list-style-type: none;
-  @include marginYX(0, 0);
-  @include paddingYX(0, 0);
+  @extend %marginNull;
+  @extend %paddingNull;
 }
 
 p {
@@ -64,18 +68,20 @@ a {
 }
 
 .operation {
-  @include flexbox(flex, column, center, center, flex-start, wrap);
+  @extend %displayFlex;
+  @include flexbox(column, center, center, flex-start);
   &__steps {
-    @include flexbox(flex, column, normal, normal, center, wrap);
+    @extend %displayFlex;
+    @include flexbox(column, center);
     @include wh(90%);
     list-style: none;
     counter-reset: compteListe;
-    @include marginYX(0, 0);
-    @include paddingYX(0, 0);
+    @extend %marginNull;
+    @extend %paddingNull;
     &--step {
       position: relative;
       border-radius: 0.5em;
-      @include box-shadow(0.2em, 0.2em, 0.5em, rgba(0, 0, 0, 0.3));
+      box-shadow: .2em .2em .5em rgba(0, 0, 0, .3);
       @include backgroundAuto($colorOperation);
       @include marginYX(1em, 0);
       @include paddingYX(1.5em, 1em);
@@ -89,39 +95,41 @@ a {
         @include wh(1.5em, 1.5em);
         @include backgroundAuto(#6100d8);
         @include paddingYX(0.2em, 0.2em);
-        @include flexbox(flex, row, normal, center, center, wrap);
+        @extend %displayFlex;
+        @include flexbox(row, center, center);
       }
       span {
-        @include font(normal,bold);
+        @include font(normal, bold);
       }
     }
   }
   .iconStep {
     @include paddingYX(0, 0.5em);
-    @include marginYX(0, 0);
+    @extend %marginNull;
   }
 }
 
 .restaurant {
-  @include flexbox(flex, column, normal, normal, normal, wrap);
+  @extend %displayFlex;
+  @include flexbox(column);
   @include paddingYX(2em, 1em);
   @include backgroundAuto($colorRestaurant);
 
   &__menus {
-    @include paddingYX(0, 0);
+    @extend %paddingNull;
     &--menu {
       @include marginYX(1em, 0);
     }
   }
   .box {
     background-color: $white;
-    @include border-radius-direction(1em);
+    border-radius: 1em;
     position: relative;
 
     &__img {
       @include border-radius-top(1em);
       object-fit: cover;
-      @include wh(100%,10em);
+      @include wh(100%, 10em);
     }
 
     &__new {
@@ -135,11 +143,13 @@ a {
     }
 
     &__cardFooter {
-      @include flexbox(flex, row, normal, space-between, normal, wrap);
+      @include flexbox(row, space-between);
       @include marginYX(0, 1em);
+      @include paddingYX(1em, 0);
+      position: relative;
 
       &--right {
-        position: relative;
+        position: absolute;
         top: 0.5em;
         right: 2em;
       }
