@@ -1,5 +1,4 @@
-@mixin flexbox($display, $direction, $content, $justify, $items, $wrap) {
-  display: $display;
+@mixin flexbox($direction, $content:normal, $justify:normal, $items:normal, $wrap:wrap) {
   flex-direction: $direction;
   align-content: $content;
   justify-content: $justify;
@@ -13,29 +12,6 @@
 
 @mixin paddingYX($y, $x) {
   padding: $y $x;
-}
-
-@mixin all-headings {
-  $base-font-size: 0.8em;
-  $heading-scale: 0.2;
-  @for $i from 1 through 6 {
-    h#{$i} {
-      font-size: $base-font-size + $heading-scale * (6 - $i);
-      @include marginYX(0.5em, 0);
-    }
-  }
-}
-@include all-headings();
-
-@mixin box-shadow($x, $y, $blur, $color) {
-  box-shadow: $x $y $blur $color;
-}
-
-@mixin border-radius-direction($size) {
-  border-top-left-radius: $size;
-  border-top-right-radius: $size;
-  border-bottom-left-radius: $size;
-  border-bottom-right-radius: $size;
 }
 
 @mixin border-radius-top($size) {
@@ -54,7 +30,7 @@
   font-size: $size;
   line-height: $line-height;
 }
-
+ 
 @mixin wh($w, $h:auto) {
   width: $w;
   height: $h;
