@@ -6,14 +6,6 @@
   flex-wrap: $wrap;
 }
 
-@mixin marginYX($y, $x) {
-  margin: $y $x;
-}
-
-@mixin paddingYX($y, $x) {
-  padding: $y $x;
-}
-
 @mixin border-radius-top($size) {
   border-top-left-radius: $size;
   border-top-right-radius: $size;

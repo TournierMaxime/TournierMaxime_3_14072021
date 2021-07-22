@@ -1,3 +1,4 @@
+/*HEART*/
 .likeEmpty {
   content: "";
   position: absolute;
@@ -23,75 +24,50 @@
   transform: scale(1.2);
   transition: transform 0.5s ease;
 }
+/*END HEART*/
 
-  .loader {
-      position: fixed;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    width:100%;
-    height:100%;
-    background-color: hsla(0,0%,100%,.9);
-    z-index: 1;
-    animation: loader 2.5s;
-    animation-delay: 1.75s;
+.loader {
+  position: fixed;
+  @extend %displayFlex;
+  @include flexbox(row, center, center, center);
+  @include wh(100%, 100%);
+  background-color: hsla(0, 0%, 100%, 0.9);
+  animation: loaderDisappear 0.01s;
+  animation-delay: 1.75s;
   animation-fill-mode: both;
-    &_item {
-      animation: item 2.5s;
-      background-color: #000;
-      height: 1em;
-      width: 1em;
-      border-radius: 1em;
-      margin:0.5em;
-      
-      
-      &_1 {
-        background-color:$primaryColor;
+  z-index: 10;
+  &__item {
+    animation: loader 1s linear;
+    transform-origin: 3em;
+    @include wh(1em, 1em);
+    border-radius: 1em;
+
+    @for $i from 1 to length($colors) {
+      &:nth-child(#{length($colors)}n + #{$i}) {
+        animation-delay: #{$i/length($colors)}s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        background: nth($colors, $i);
+        position: absolute;
       }
-      &_2 {
-        background-color:$secondaryColor;
-      }
-      &_3 {
-        background-color:$thirdColor;
-      }
-      
-      @for $i from 0 to 3 {
-        &_#{$i} {
-          animation-delay:#{$i/3}s;
-          animation-direction: normal;
-          animation-fill-mode:backwards;
-          animation-timing-function: linear;
-        }
-      } 
     }
   }
+}
 
-  @keyframes loader {
-    100% {
-      opacity: 0;
-      z-index: -10;
-    }
-  } 
-  
-  @keyframes item {
-      0% {
-          transform: translate(0px,0px);
-
-          
-      }
-    25% {
-          transform: translate(0px,20px);
-
-      }
-    50% {
-          transform: translate(0px,0px);
-
-      }
-    75% {
-          transform: translate(0px,20px);
-
-      }
-      100% {
-        transform: translate(0px,0px);
-      }
+@keyframes loaderDisappear {
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
+} 
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    z-index: -1000000;
+  }
+}

@@ -24,7 +24,7 @@ body {
 
 .footer {
   @include backgroundAuto(rgb(20, 20, 20));
-  @include paddingYX(.5em,.5em);
+  padding: .5em;
   &__ul {
     &--headTitle {
       font-family: Shrikhand;
@@ -33,7 +33,7 @@ body {
     }
     &--li {
       @include font(normal,normal);
-      @include marginYX(0.5em, 0);
+      margin: .5em 0;
     }
     .footerLink {
       text-decoration: none;
