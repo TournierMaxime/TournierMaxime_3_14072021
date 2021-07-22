@@ -4,17 +4,22 @@ html {
 
 body {
   @include wh(100%);
-  @include flexbox(flex, column, normal, normal, normal, wrap);
-  @include marginYX(0, 0);
+  @extend %displayFlex;
+  @include flexbox(column);
+  @extend %marginNull;
 }
 
 .headerIndex {
   font-family: Shrikhand;
   @include wh(100%);
-  @include flexbox(flex, column, normal, normal, center, wrap);
+  @extend %displayFlex;
+  @include flexbox(column, center);
   text-align: center;
   position: relative;
-  @include box-shadow(0, 0, 1.5em, rgba(0, 0, 0, 0.25));
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, .25);
+  &__title {
+    @extend %all-headings;
+  }
 }
 
 .footer {
