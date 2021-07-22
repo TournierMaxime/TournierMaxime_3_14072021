@@ -7,37 +7,44 @@
   font-family: Roboto;
   src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
 }
-h1 {
+/*Ajuste la couleur du texte par rapport à la luminosité du background*/
+.restaurant, .operation__steps--step::before, .operation__steps, .operation, .explore, .location, main, .headerIndex, body {
+  display: flex;
+}
+
+.operation .iconStep, .operation__steps, ul, .location, main, body {
+  margin: 0;
+}
+
+.restaurant__menus, .operation__steps, ul {
+  padding: 0;
+}
+
+.headerIndex__title h1 {
   font-size: 1.8em;
   margin: 0.5em 0;
 }
-
-h2 {
+.headerIndex__title h2 {
   font-size: 1.6em;
   margin: 0.5em 0;
 }
-
-h3 {
+.headerIndex__title h3 {
   font-size: 1.4em;
   margin: 0.5em 0;
 }
-
-h4 {
+.headerIndex__title h4 {
   font-size: 1.2em;
   margin: 0.5em 0;
 }
-
-h5 {
+.headerIndex__title h5 {
   font-size: 1em;
   margin: 0.5em 0;
 }
-
-h6 {
+.headerIndex__title h6 {
   font-size: 0.8em;
   margin: 0.5em 0;
 }
 
-/*Ajuste la couleur du texte par rapport à la luminosité du background*/
 .likeEmpty {
   content: "";
   position: absolute;
@@ -183,30 +190,26 @@ html {
 body {
   width: 100%;
   height: auto;
-  display: flex;
   flex-direction: column;
   align-content: normal;
   justify-content: normal;
   align-items: normal;
   flex-wrap: wrap;
-  margin: 0 0;
 }
 
 .headerIndex {
   font-family: Shrikhand;
   width: 100%;
   height: auto;
-  display: flex;
   flex-direction: column;
-  align-content: normal;
+  align-content: center;
   justify-content: normal;
-  align-items: center;
+  align-items: normal;
   flex-wrap: wrap;
   text-align: center;
   position: relative;
   box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.25);
 }
-
 .footer {
   background-color: #141414;
   color: white;
@@ -240,8 +243,6 @@ body {
 }
 
 main {
-  margin: 0 0;
-  display: flex;
   flex-direction: column;
   align-content: normal;
   justify-content: normal;
@@ -254,9 +255,7 @@ main {
   color: black;
   width: 100%;
   height: auto;
-  margin: 0 0;
   padding: 1em 0;
-  display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
@@ -273,11 +272,10 @@ main {
 .explore {
   width: 100%;
   height: auto;
-  display: flex;
   flex-direction: column;
-  align-content: normal;
+  align-content: center;
   justify-content: normal;
-  align-items: center;
+  align-items: normal;
   flex-wrap: wrap;
   text-align: center;
   background-color: #fafafa;
@@ -303,6 +301,7 @@ main {
   border-radius: 10em;
   color: white;
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  margin: 0 1em;
   padding: 1em 1em;
   border: none;
   box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
@@ -314,8 +313,6 @@ main {
 
 ul {
   list-style-type: none;
-  margin: 0 0;
-  padding: 0 0;
 }
 
 p {
@@ -331,7 +328,6 @@ a {
 }
 
 .operation {
-  display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
@@ -339,18 +335,15 @@ a {
   flex-wrap: wrap;
 }
 .operation__steps {
-  display: flex;
   flex-direction: column;
-  align-content: normal;
+  align-content: center;
   justify-content: normal;
-  align-items: center;
+  align-items: normal;
   flex-wrap: wrap;
   width: 90%;
   height: auto;
   list-style: none;
   counter-reset: compteListe;
-  margin: 0 0;
-  padding: 0 0;
 }
 .operation__steps--step {
   position: relative;
@@ -377,11 +370,10 @@ a {
   background-color: #6100d8;
   color: white;
   padding: 0.2em 0.2em;
-  display: flex;
   flex-direction: row;
-  align-content: normal;
+  align-content: center;
   justify-content: center;
-  align-items: center;
+  align-items: normal;
   flex-wrap: wrap;
 }
 .operation__steps--step::before a {
@@ -395,11 +387,9 @@ a {
 }
 .operation .iconStep {
   padding: 0 0.5em;
-  margin: 0 0;
 }
 
 .restaurant {
-  display: flex;
   flex-direction: column;
   align-content: normal;
   justify-content: normal;
@@ -412,18 +402,12 @@ a {
 .restaurant a {
   color: black;
 }
-.restaurant__menus {
-  padding: 0 0;
-}
 .restaurant__menus--menu {
   margin: 1em 0;
 }
 .restaurant .box {
   background-color: white;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  border-radius: 1em;
   position: relative;
 }
 .restaurant .box__img {
@@ -448,16 +432,17 @@ a {
   color: black;
 }
 .restaurant .box__cardFooter {
-  display: flex;
   flex-direction: row;
-  align-content: normal;
-  justify-content: space-between;
+  align-content: space-between;
+  justify-content: normal;
   align-items: normal;
   flex-wrap: wrap;
   margin: 0 1em;
+  padding: 1em 0;
+  position: relative;
 }
 .restaurant .box__cardFooter--right {
-  position: relative;
+  position: absolute;
   top: 0.5em;
   right: 2em;
 }/*# sourceMappingURL=app.css.map */
