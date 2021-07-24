@@ -20,7 +20,7 @@
             @include flexbox(row,normal,center);
             @include wh(100%);
             &--menu {
-                @include wh(48%);
+                @include wh(47%);
                 padding: 1em;
                 margin:0;
             }
