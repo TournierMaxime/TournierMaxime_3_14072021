@@ -20,22 +20,22 @@
   padding: 0;
 }
 
-.restaurant .description__title h1, .headerIndex__title h1 {
+.restaurant .description__title h1, .operation__title h1, .headerIndex__title h1 {
   font-size: 1.8em;
 }
-.restaurant .description__title h2, .headerIndex__title h2 {
+.restaurant .description__title h2, .operation__title h2, .headerIndex__title h2 {
   font-size: 1.6em;
 }
-.restaurant .description__title h3, .headerIndex__title h3 {
+.restaurant .description__title h3, .operation__title h3, .headerIndex__title h3 {
   font-size: 1.4em;
 }
-.restaurant .description__title h4, .headerIndex__title h4 {
+.restaurant .description__title h4, .operation__title h4, .headerIndex__title h4 {
   font-size: 1.2em;
 }
-.restaurant .description__title h5, .headerIndex__title h5 {
+.restaurant .description__title h5, .operation__title h5, .headerIndex__title h5 {
   font-size: 1em;
 }
-.restaurant .description__title h6, .headerIndex__title h6 {
+.restaurant .description__title h6, .operation__title h6, .headerIndex__title h6 {
   font-size: 0.8em;
 }
 
@@ -253,14 +253,10 @@ body {
 .footer {
   background-color: #141414;
   color: white;
-  padding: 2em;
+  padding: 1em 3em;
 }
 .footer a {
   color: white;
-}
-.footer__ul {
-  margin: auto;
-  max-width: 1440px;
 }
 .footer__ul--headTitle {
   font-family: Shrikhand;
@@ -373,10 +369,14 @@ a {
 
 .operation {
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: flex-start;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
   flex-wrap: wrap;
+  padding: 2em;
+}
+.operation__title {
+  margin: 0;
 }
 .operation__steps {
   flex-direction: column;
@@ -384,7 +384,7 @@ a {
   justify-content: normal;
   align-items: normal;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   height: auto;
   list-style: none;
   counter-reset: compteListe;
@@ -442,7 +442,7 @@ a {
   flex-wrap: wrap;
   background-color: #f6f6f6;
   color: black;
-  padding: 2em 1em;
+  padding: 2em;
 }
 .restaurant a {
   color: black;
@@ -459,7 +459,7 @@ a {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   width: 100%;
-  height: 10em;
+  height: 12em;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -490,4 +490,43 @@ a {
   position: absolute;
   top: 0.5em;
   right: 2em;
+}
+@media screen and (min-width: 1024px) {
+  .operation__title {
+    margin: 1em;
+  }
+  .operation__steps {
+    flex-direction: row;
+    align-content: normal;
+    justify-content: normal;
+    align-items: normal;
+    flex-wrap: nowrap;
+  }
+  .operation__steps--step {
+    margin: 0 2em;
+  }
+
+  .restaurant__title {
+    margin: 1em;
+  }
+  .restaurant__menus {
+    display: flex;
+    flex-direction: row;
+    align-content: normal;
+    justify-content: center;
+    align-items: normal;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+  .restaurant__menus--menu {
+    width: 48%;
+    height: auto;
+    padding: 1em;
+    margin: 0;
+  }
+  .restaurant .box__img {
+    width: 100%;
+    height: 16em;
+  }
 }/*# sourceMappingURL=app.css.map */
