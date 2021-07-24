@@ -12,14 +12,20 @@
 }
 
 %all-headings {
+
     $base-font-size: 0.8em;
     $heading-scale: 0.2;
+
     @for $i from 1 through 6 {
       h#{$i} {
         font-size: $base-font-size + $heading-scale * (6 - $i);
-        margin: .5em 0;
       }
     }
+    
   }
+
+%max-width {
+  max-width: $max-width;
+}
 
     

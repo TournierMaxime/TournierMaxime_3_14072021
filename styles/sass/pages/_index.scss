@@ -5,24 +5,30 @@ main {
 }
 
 .location {
+
   @include backgroundAuto($colorLocation);
   @include wh(100%);
-  @extend %marginNull;
-  padding: 1em 0;
-  @extend %displayFlex;
   @include flexbox(row, center, center, center);
 
+  @extend %marginNull;
+  @extend %displayFlex;
+
+  padding: 1em 0;
+  
   &__icon {
     margin: 0 1em;
   }
 }
 
 .explore {
+
   @include wh(100%);
-  @extend %displayFlex;
-  @include flexbox(column, center);
-  text-align: center;
+  @include flexbox(column, center, center, center);
   @include backgroundAuto($colorExplore);
+
+  @extend %displayFlex;
+  
+  text-align: center;
   padding: 1em 0;
 
   &__title {
@@ -34,17 +40,15 @@ main {
   }
 
   &__button {
+
     border-radius: 10em;
     color: $white;
-    background: linear-gradient(
-      0deg,
-      rgba(147, 86, 220, 0.9),
-      rgba(255, 121, 218, 0.9)
-    );
+    background: linear-gradient(0deg,rgba(147, 86, 220, 0.9),rgba(255, 121, 218, 0.9));
     margin: 0 1em;
     padding: 1em;
     border: none;
     box-shadow: .25em .25em .25em rgba(0, 0, 0, .25);
+
     @include font(normal, bold);
   }
 }
@@ -68,35 +72,49 @@ a {
 }
 
 .operation {
+
   @extend %displayFlex;
   @include flexbox(column, center, center, flex-start);
+
   &__steps {
+
     @extend %displayFlex;
-    @include flexbox(column, center);
-    @include wh(90%);
-    list-style: none;
-    counter-reset: compteListe;
     @extend %marginNull;
     @extend %paddingNull;
+
+    @include flexbox(column, center);
+    @include wh(90%);
+
+    list-style: none;
+    counter-reset: compteListe;
+
     &--step {
+
+      @include wh(90%);
+      @include backgroundAuto($colorOperation);
+
       position: relative;
       border-radius: 0.5em;
       box-shadow: .2em .2em .5em rgba(0, 0, 0, .3);
-      @include backgroundAuto($colorOperation);
       margin: 1em 0;
       padding: 1.5em 1em;
-      @include wh(90%);
+
       &::before {
+
+        @include wh(1.5em, 1.5em);
+        @include backgroundAuto(#6100d8);
+        @include flexbox(row, center, center);
+
+        @extend %displayFlex;
+
         counter-increment: compteListe 1;
         content: counter(compteListe) " ";
         position: absolute;
+        top: 1em;
         left: -1em;
         border-radius: 100px;
-        @include wh(1.5em, 1.5em);
-        @include backgroundAuto(#6100d8);
         padding: .2em;
-        @extend %displayFlex;
-        @include flexbox(row, center, center);
+        
       }
       span {
         @include font(normal, bold);
@@ -110,10 +128,13 @@ a {
 }
 
 .restaurant {
+
   @extend %displayFlex;
+
   @include flexbox(column);
-  padding: 2em 1em;
   @include backgroundAuto($colorRestaurant);
+
+  padding: 2em 1em;
 
   &__menus {
     @extend %paddingNull;
@@ -127,23 +148,30 @@ a {
     position: relative;
 
     &__img {
+
       @include border-radius-top(1em);
-      object-fit: cover;
       @include wh(100%, 10em);
+
+      object-fit: cover;
+  
     }
 
     &__new {
+
+      @include backgroundAuto(#99e2d0);
+
       position: absolute;
       top: 1em;
       right: 1em;
-      @include backgroundAuto(#99e2d0);
       color: #1d9e7e;
       border-radius: 0.2em;
       padding: .5em;
     }
 
     &__cardFooter {
+
       @include flexbox(row, space-between);
+
       margin: 0 1em;
       padding: 1em 0;
       position: relative;
@@ -155,4 +183,10 @@ a {
       }
     }
   }
+
+  .description__title {
+    @extend %all-headings;
+    @extend %marginNull;
+  }
+
 }

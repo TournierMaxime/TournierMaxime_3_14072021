@@ -26,6 +26,8 @@
 }
 /*END HEART*/
 
+
+/*SPINNER*/
 .loader {
   position: fixed;
   @extend %displayFlex;
@@ -71,3 +73,5 @@
     z-index: -1000000;
   }
 }
+
+/*END SPINNER*/

@@ -12,7 +12,7 @@
   display: flex;
 }
 
-.operation .iconStep, .operation__steps, ul, .location, main, body {
+.restaurant .description__title, .operation .iconStep, .operation__steps, ul, .location, main, body {
   margin: 0;
 }
 
@@ -20,29 +20,23 @@
   padding: 0;
 }
 
-.headerIndex__title h1 {
+.restaurant .description__title h1, .headerIndex__title h1 {
   font-size: 1.8em;
-  margin: 0.5em 0;
 }
-.headerIndex__title h2 {
+.restaurant .description__title h2, .headerIndex__title h2 {
   font-size: 1.6em;
-  margin: 0.5em 0;
 }
-.headerIndex__title h3 {
+.restaurant .description__title h3, .headerIndex__title h3 {
   font-size: 1.4em;
-  margin: 0.5em 0;
 }
-.headerIndex__title h4 {
+.restaurant .description__title h4, .headerIndex__title h4 {
   font-size: 1.2em;
-  margin: 0.5em 0;
 }
-.headerIndex__title h5 {
+.restaurant .description__title h5, .headerIndex__title h5 {
   font-size: 1em;
-  margin: 0.5em 0;
 }
-.headerIndex__title h6 {
+.restaurant .description__title h6, .headerIndex__title h6 {
   font-size: 0.8em;
-  margin: 0.5em 0;
 }
 
 /*HEART*/
@@ -73,6 +67,7 @@
 }
 
 /*END HEART*/
+/*SPINNER*/
 .loader {
   position: fixed;
   flex-direction: row;
@@ -227,6 +222,7 @@
     z-index: -1000000;
   }
 }
+/*END SPINNER*/
 html {
   font-family: Roboto;
 }
@@ -242,7 +238,6 @@ body {
 }
 
 .headerIndex {
-  font-family: Shrikhand;
   width: 100%;
   height: auto;
   flex-direction: column;
@@ -250,6 +245,7 @@ body {
   justify-content: normal;
   align-items: normal;
   flex-wrap: wrap;
+  font-family: Shrikhand;
   text-align: center;
   position: relative;
   box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.25);
@@ -257,10 +253,14 @@ body {
 .footer {
   background-color: #141414;
   color: white;
-  padding: 0.5em;
+  padding: 2em;
 }
 .footer a {
   color: white;
+}
+.footer__ul {
+  margin: auto;
+  max-width: 1440px;
 }
 .footer__ul--headTitle {
   font-family: Shrikhand;
@@ -299,12 +299,12 @@ main {
   color: black;
   width: 100%;
   height: auto;
-  padding: 1em 0;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 1em 0;
 }
 .location a {
   color: black;
@@ -318,12 +318,12 @@ main {
   height: auto;
   flex-direction: column;
   align-content: center;
-  justify-content: normal;
-  align-items: normal;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  text-align: center;
   background-color: #fafafa;
   color: black;
+  text-align: center;
   padding: 1em 0;
 }
 .explore a {
@@ -390,35 +390,36 @@ a {
   counter-reset: compteListe;
 }
 .operation__steps--step {
+  width: 90%;
+  height: auto;
+  background-color: #f6f6f6;
+  color: black;
   position: relative;
   border-radius: 0.5em;
   box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
-  background-color: #f6f6f6;
-  color: black;
   margin: 1em 0;
   padding: 1.5em 1em;
-  width: 90%;
-  height: auto;
 }
 .operation__steps--step a {
   color: black;
 }
 .operation__steps--step::before {
-  counter-increment: compteListe 1;
-  content: counter(compteListe) " ";
-  position: absolute;
-  left: -1em;
-  border-radius: 100px;
   width: 1.5em;
   height: 1.5em;
   background-color: #6100d8;
   color: white;
-  padding: 0.2em;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   align-items: normal;
   flex-wrap: wrap;
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  position: absolute;
+  top: 1em;
+  left: -1em;
+  border-radius: 100px;
+  padding: 0.2em;
 }
 .operation__steps--step::before a {
   color: white;
@@ -439,9 +440,9 @@ a {
   justify-content: normal;
   align-items: normal;
   flex-wrap: wrap;
-  padding: 2em 1em;
   background-color: #f6f6f6;
   color: black;
+  padding: 2em 1em;
 }
 .restaurant a {
   color: black;
@@ -457,17 +458,17 @@ a {
 .restaurant .box__img {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
-  -o-object-fit: cover;
-     object-fit: cover;
   width: 100%;
   height: 10em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .restaurant .box__new {
+  background-color: #99e2d0;
+  color: black;
   position: absolute;
   top: 1em;
   right: 1em;
-  background-color: #99e2d0;
-  color: black;
   color: #1d9e7e;
   border-radius: 0.2em;
   padding: 0.5em;
