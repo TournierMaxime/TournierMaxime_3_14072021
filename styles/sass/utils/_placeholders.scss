@@ -28,4 +28,14 @@
   max-width: $max-width;
 }
 
+%likeFillStatus {
+  opacity: 1;
+  background: linear-gradient(175deg, $primaryColor, $secondaryColor);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
+}
+
     

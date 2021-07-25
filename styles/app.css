@@ -48,24 +48,6 @@ ul, .operation__steps, .restaurant__menus {
   font-size: 0.8em;
 }
 
-/*HEART*/
-.likeEmpty {
-  content: "";
-  position: absolute;
-}
-
-.likeEmpty:hover {
-  display: none;
-}
-
-.likeFill {
-  position: absolute;
-  content: "";
-  opacity: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
 .likeFill:hover {
   opacity: 1;
   background: linear-gradient(175deg, #9356DC, #FF79DA);
@@ -78,6 +60,23 @@ ul, .operation__steps, .restaurant__menus {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+/*HEART*/
+.likeEmpty {
+  content: "";
+  position: absolute;
+}
+
+/*.likeEmpty:hover {
+  display: none;
+}*/
+.likeFill {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 /*END HEART*/
