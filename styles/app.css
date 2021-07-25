@@ -68,9 +68,10 @@ ul, .operation__steps, .restaurant__menus {
   position: absolute;
 }
 
-/*.likeEmpty:hover {
+.likeEmpty:hover {
   display: none;
-}*/
+}
+
 .likeFill {
   position: absolute;
   content: "";
