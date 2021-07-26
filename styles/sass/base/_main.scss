@@ -1,9 +1,9 @@
 html {
-    font-family: Roboto;
-  }
-  
-  body {
-    @include wh(100%);
-    @include flexbox(column);
-    @extend %marginNull;
-  }
+  font-family: Roboto;
+}
+
+body {
+  @include wh(100%);
+  @include flexbox(column);
+  @extend %marginNull;
+}
