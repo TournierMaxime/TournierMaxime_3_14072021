@@ -1,0 +1,37 @@
+.box {
+  background-color: $white;
+  border-radius: 1em;
+  position: relative;
+
+  &__img {
+    @include border-radius-top(1em);
+    @include wh(100%, 12em);
+
+    object-fit: cover;
+  }
+
+  &__new {
+    @include backgroundAuto(#99e2d0);
+
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: #1d9e7e;
+    border-radius: 0.2em;
+    padding: 0.5em;
+  }
+
+  &__cardFooter {
+    @include flexbox(row, space-between);
+
+    margin: 0 1em;
+    padding: 1em 0;
+    position: relative;
+
+    &--right {
+      position: absolute;
+      top: 0.5em;
+      right: 2em;
+    }
+  }
+}

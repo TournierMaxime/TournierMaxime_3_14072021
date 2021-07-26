@@ -1,9 +1,17 @@
-@mixin flexbox($direction, $content:normal, $justify:normal, $items:normal, $wrap:wrap) {
+@mixin flexbox(
+  $direction,
+  $content: normal,
+  $justify: normal,
+  $items: normal,
+  $wrap: wrap,
+  $display: flex
+) {
   flex-direction: $direction;
   align-content: $content;
   justify-content: $justify;
   align-items: $items;
   flex-wrap: $wrap;
+  display: $display;
 }
 
 @mixin border-radius-top($size) {
@@ -16,32 +24,33 @@
   border-bottom-right-radius: $size;
 }
 
-@mixin font($style:normal, $weight:normal, $size:1em, $line-height:1) {
+@mixin font($style: normal, $weight: normal, $size: 1em, $line-height: 1) {
   font-style: $style;
   font-weight: $weight;
   font-size: $size;
   line-height: $line-height;
 }
- 
-@mixin wh($w, $h:auto) {
+
+@mixin wh($w, $h: auto) {
   width: $w;
   height: $h;
 }
 
 /*Ajuste la couleur du texte par rapport à la luminosité du background*/
 @mixin backgroundAuto($bgColor) {
-
   @if lightness($bgColor) > 50% {
     background-color: $bgColor;
     color: black;
 
-    a { color: black; }
-
+    a {
+      color: black;
+    }
   } @else {
     background-color: $bgColor;
     color: white;
 
-    a { color: white; }
-
+    a {
+      color: white;
+    }
   }
 }

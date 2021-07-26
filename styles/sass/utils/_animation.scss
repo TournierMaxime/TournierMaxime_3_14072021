@@ -21,11 +21,10 @@
 
 /*END HEART*/
 
-
 /*SPINNER*/
 .loader {
   position: fixed;
-  @extend %displayFlex;
+
   @include flexbox(row, center, center, center);
   @include wh(100%, 100%);
   background-color: hsla(0, 0%, 100%, 0.9);
@@ -57,7 +56,7 @@
     opacity: 0;
     z-index: -10;
   }
-} 
+}
 
 @keyframes loader {
   0% {

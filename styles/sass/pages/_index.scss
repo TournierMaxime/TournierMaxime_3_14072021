@@ -1,33 +1,27 @@
 main {
   @extend %marginNull;
-  @extend %displayFlex;
   @include flexbox(column);
 }
 
 .location {
-
   @include backgroundAuto($colorLocation);
   @include wh(100%);
   @include flexbox(row, center, center, center);
 
   @extend %marginNull;
-  @extend %displayFlex;
 
   padding: 1em 0;
-  
+
   &__icon {
     margin: 0 1em;
   }
 }
 
 .explore {
-
   @include wh(100%);
   @include flexbox(column, center, center, center);
   @include backgroundAuto($colorExplore);
 
-  @extend %displayFlex;
-  
   text-align: center;
   padding: 1em 0;
 
@@ -38,19 +32,6 @@ main {
   &__subtitle {
     @include font(normal, 300, 1.4em);
   }
-
-  &__button {
-
-    border-radius: 10em;
-    color: $white;
-    background: linear-gradient(0deg,rgba(147, 86, 220, 0.9),rgba(255, 121, 218, 0.9));
-    margin: 0 1em;
-    padding: 1em;
-    border: none;
-    box-shadow: .25em .25em .25em rgba(0, 0, 0, .25);
-
-    @include font(normal, bold);
-  }
 }
 
 ul {
@@ -60,7 +41,7 @@ ul {
 }
 
 p {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 a {
@@ -72,8 +53,6 @@ a {
 }
 
 .operation {
-
-  @extend %displayFlex;
   @include flexbox(column);
 
   padding: 2em;
@@ -82,62 +61,13 @@ a {
     @extend %all-headings;
     margin: 0;
   }
-
-  &__steps {
-
-    @extend %displayFlex;
-    @extend %marginNull;
-    @extend %paddingNull;
-
-    @include flexbox(column,center);
-    @include wh(100%);
-
-    list-style: none;
-    counter-reset: compteListe;
-
-    &--step {
-
-      @include wh(90%);
-      @include backgroundAuto($colorOperation);
-
-      position: relative;
-      border-radius: 0.5em;
-      box-shadow: .2em .2em .5em rgba(0, 0, 0, .3);
-      margin: 1em 0;
-      padding: 1.5em 1em;
-
-      &::before {
-
-        @include wh(1.5em, 1.5em);
-        @include backgroundAuto(#6100d8);
-        @include flexbox(row, center, center);
-
-        @extend %displayFlex;
-
-        counter-increment: compteListe 1;
-        content: counter(compteListe) " ";
-        position: absolute;
-        top: 1em;
-        left: -1em;
-        border-radius: 100px;
-        padding: .2em;
-        
-      }
-      span {
-        @include font(normal, bold);
-      }
-    }
-  }
   .iconStep {
-    padding: 0 .5em;
+    padding: 0 0.5em;
     @extend %marginNull;
   }
 }
 
 .restaurant {
-
-  @extend %displayFlex;
-
   @include flexbox(column);
   @include backgroundAuto($colorRestaurant);
 
@@ -149,51 +79,9 @@ a {
       margin: 1em 0;
     }
   }
-  .box {
-    background-color: $white;
-    border-radius: 1em;
-    position: relative;
-
-    &__img {
-
-      @include border-radius-top(1em);
-      @include wh(100%, 12em);
-
-      object-fit: cover;
-  
-    }
-
-    &__new {
-
-      @include backgroundAuto(#99e2d0);
-
-      position: absolute;
-      top: 1em;
-      right: 1em;
-      color: #1d9e7e;
-      border-radius: 0.2em;
-      padding: .5em;
-    }
-
-    &__cardFooter {
-
-      @include flexbox(row, space-between);
-
-      margin: 0 1em;
-      padding: 1em 0;
-      position: relative;
-
-      &--right {
-        position: absolute;
-        top: 0.5em;
-        right: 2em;
-      }
-    }
-  }
 
   .description__title {
     @extend %all-headings;
     @extend %marginNull;
   }
-
 }

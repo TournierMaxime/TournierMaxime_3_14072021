@@ -1,28 +1,21 @@
-
-%displayFlex {
-    display:flex;
-}
-
 %marginNull {
-    margin:0;
+  margin: 0;
 }
 
 %paddingNull {
-    padding:0;
+  padding: 0;
 }
 
 %all-headings {
+  $base-font-size: 0.8em;
+  $heading-scale: 0.2;
 
-    $base-font-size: 0.8em;
-    $heading-scale: 0.2;
-
-    @for $i from 1 through 6 {
-      h#{$i} {
-        font-size: $base-font-size + $heading-scale * (6 - $i);
-      }
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: $base-font-size + $heading-scale * (6 - $i);
     }
-    
   }
+}
 
 %max-width {
   max-width: $max-width;
@@ -37,5 +30,3 @@
   transform: scale(1.2);
   transition: transform 0.5s ease;
 }
-
-    

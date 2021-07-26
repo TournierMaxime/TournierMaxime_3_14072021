@@ -1,0 +1,13 @@
+.headerIndex {
+  @include wh(100%);
+  @include flexbox(column, center);
+
+  font-family: Shrikhand;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.25);
+
+  &__title {
+    @extend %all-headings;
+  }
+}

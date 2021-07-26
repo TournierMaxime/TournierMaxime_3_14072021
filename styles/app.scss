@@ -3,6 +3,11 @@
 @import "sass/utils/mixins.scss";
 @import "sass/utils/placeholders.scss";
 @import "sass/utils/animation.scss";
-@import "sass/layouts/template.scss";
+@import "sass/base/main.scss";
+@import "sass/layouts/header.scss";
+@import "sass/layouts/footer.scss";
 @import "sass/pages/index.scss";
+@import "sass/components/buttons.scss";
+@import "sass/components/boxs.scss";
+@import "sass/components/lists.scss";
 @import "sass/layouts/responsive.scss";
