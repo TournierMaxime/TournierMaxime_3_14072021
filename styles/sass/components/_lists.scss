@@ -1,15 +1,16 @@
+//Liste de la page d'accueil partie fonctionnement
 .operation__steps {
-  @extend %marginNull;
-  @extend %paddingNull;
+  @include margin($null);
+  @include padding($null);
 
-  @include flexbox(column, center);
-  @include wh(100%);
+  @include flexbox(column, stretch);
+  @include wh(95%);
 
   list-style: none;
   counter-reset: compteListe;
 
   &--step {
-    @include wh(90%);
+    @include wh(100%);
     @include backgroundAuto($colorOperation);
 
     position: relative;

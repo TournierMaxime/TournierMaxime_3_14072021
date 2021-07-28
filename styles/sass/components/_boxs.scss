@@ -1,3 +1,4 @@
+//Box des restaurants sur la page d'accueil
 .box {
   background-color: $white;
   border-radius: 1em;
@@ -18,7 +19,7 @@
     right: 1em;
     color: #1d9e7e;
     border-radius: 0.2em;
-    padding: 0.5em;
+    @include padding($small);
   }
 
   &__cardFooter {
