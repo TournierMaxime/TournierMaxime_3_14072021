@@ -1,0 +1,23 @@
+
+.mainMenu {
+    &__img {
+        @include wh(100%);
+        object-fit: cover;
+    }
+    &__section {
+        @include wh(94%);
+        @include backgroundAuto(blue);
+        z-index: 1;
+        @include border-radius-top(3em);
+        @include flexbox(row, normal, space-evenly);
+        @include padding($small);
+        &--heading { 
+        @extend %all-headings;
+        @include font(normal,normal,1.4em,1,Shrikhand);
+        }
+        &--heart {
+            @include margin($medium); 
+        }
+    }
+
+}
