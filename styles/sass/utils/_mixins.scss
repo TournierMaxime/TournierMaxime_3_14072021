@@ -14,6 +14,30 @@
   display: $display;
 }
 
+@mixin margin($value) {
+  @if $value == $small {
+    margin: .5em;
+  } @else if $value == $medium {
+    margin: 1em;
+  } @else if $value == $big {
+    margin: 1.5em;
+  } @else if $value == $null {
+    margin: 0;
+  }
+}
+
+@mixin padding($value) {
+  @if $value == $small {
+    padding: .5em;
+  } @else if $value == $medium {
+    padding: 1em;
+  } @else if $value == $big {
+    padding: 1.5em;
+  } @else if $value == $null {
+    padding: 0;
+  }
+}
+
 @mixin border-radius-top($size) {
   border-top-left-radius: $size;
   border-top-right-radius: $size;
@@ -24,11 +48,12 @@
   border-bottom-right-radius: $size;
 }
 
-@mixin font($style: normal, $weight: normal, $size: 1em, $line-height: 1) {
+@mixin font($style: normal, $weight: normal, $size: 1em, $line-height: 1, $font-family: Roboto) {
   font-style: $style;
   font-weight: $weight;
   font-size: $size;
   line-height: $line-height;
+  font-family: $font-family;
 }
 
 @mixin wh($w, $h: auto) {
