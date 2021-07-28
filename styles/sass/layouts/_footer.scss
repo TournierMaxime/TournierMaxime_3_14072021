@@ -1,11 +1,11 @@
+//Layout réutilisable du footer
 .footer {
   @include backgroundAuto(rgb(20, 20, 20));
   padding: 1em 3em;
 
   &__ul {
     &--headTitle {
-      font-family: Shrikhand;
-      @include font(normal, normal, 1.2em);
+      @include font(normal, normal, 1.2em, 1, Shrikhand);
       margin-bottom: 1em;
     }
 
