@@ -1,14 +1,9 @@
-main {
-  @extend %marginNull;
-  @include flexbox(column);
-}
 
 .location {
   @include backgroundAuto($colorLocation);
   @include wh(100%);
   @include flexbox(row, center, center, center);
-
-  @extend %marginNull;
+  @include margin($null);
 
   padding: 1em 0;
 
@@ -34,20 +29,6 @@ main {
   }
 }
 
-ul {
-  list-style-type: none;
-  @extend %marginNull;
-  @extend %paddingNull;
-}
-
-p {
-  margin: 0.5em 0;
-}
-
-a {
-  text-decoration: none;
-}
-
 .iconStep {
   margin-right: 1em;
 }
@@ -59,11 +40,11 @@ a {
 
   &__title {
     @extend %all-headings;
-    margin: 0;
+    @include margin($null);
   }
   .iconStep {
     padding: 0 0.5em;
-    @extend %marginNull;
+    @include margin($null);
   }
 }
 
@@ -74,7 +55,7 @@ a {
   padding: 2em;
 
   &__menus {
-    @extend %paddingNull;
+    @include padding($null);
     &--menu {
       margin: 1em 0;
     }
@@ -82,6 +63,6 @@ a {
 
   .description__title {
     @extend %all-headings;
-    @extend %marginNull;
+    @include margin($null);
   }
 }
