@@ -1,3 +1,4 @@
+//Balise générique utilisé sur les différentes pages
 html {
   font-family: Roboto;
 }
@@ -5,5 +6,24 @@ html {
 body {
   @include wh(100%);
   @include flexbox(column);
-  @extend %marginNull;
+  @include margin($null);
+}
+
+main {
+  @include margin($null);
+  @include flexbox(column);
+}
+
+ul {
+  list-style-type: none;
+  @include margin($null);
+  @include padding($null);
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+a {
+  text-decoration: none;
 }
