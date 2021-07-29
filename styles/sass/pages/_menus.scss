@@ -3,12 +3,13 @@
     &__img {
         @include wh(100%);
         object-fit: cover;
+
     }
     &__section {
-        @include wh(94%);
-        @include backgroundAuto(blue);
-        z-index: 1;
-        @include border-radius-top(3em);
+        position: relative;
+        top: -3em;
+        @include backgroundAuto($mainColor);
+        @include border-radius-top(2em);
         @include flexbox(row, normal, space-evenly);
         @include padding($small);
         &--heading { 

@@ -7,6 +7,7 @@ body {
   @include wh(100%);
   @include flexbox(column);
   @include margin($null);
+  background-color: $mainColor;
 }
 
 main {
