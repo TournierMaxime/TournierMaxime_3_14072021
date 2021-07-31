@@ -11,4 +11,11 @@
   &__title {
     @extend %all-headings;
   }
+
+  &__homeLink {
+    @include flexbox(row,normal,normal,baseline);
+    i {
+      @include padding($small);
+    }
+  }
 }

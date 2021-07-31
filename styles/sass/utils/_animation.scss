@@ -69,3 +69,122 @@
 }
 
 /*END SPINNER*/
+
+/*MENU TRANSITION*/
+.menu {
+  @include padding($medium);
+  @include flexbox(row);
+  &__delay {
+    animation: $animation $animDuration;
+    margin: 1em 0em;
+    @include wh(100%, 100%);
+
+    @for $i from 0 to $totalMenus {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i/$totalMenus}s;
+        animation-direction: normal;
+        animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
+
+@keyframes menu {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+/*END MENU*/
+
+/*ANIMATION HOVER MENU*/
+
+.menuItem {
+  background-color: white;
+  @include padding($medium);
+  @include flexbox(row);
+  border-radius: 0.75em;
+  margin: 1em 0;
+  box-shadow: 0.25em 0.25em 1em rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
+
+  &__header {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  &__title {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__description {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__price {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5em;
+  }
+
+  &__confirmation {
+    background-color: $thirdColor;
+    margin: -1em -5em -1em 1em;
+    @include wh(4em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+  }
+
+  &:hover &__confirmation {
+    margin-right: -1em;
+  }
+
+  &__wrapIcon {
+    height: 1.6em;
+    width: 1.6em;
+    background-color: white;
+    @include flexbox(row,normal,center,center);
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+  }
+
+  &:hover &__wrapIcon {
+    transform: rotate(0);
+  }
+
+  &__icon {
+    color: $thirdColor;
+  }
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*END*/

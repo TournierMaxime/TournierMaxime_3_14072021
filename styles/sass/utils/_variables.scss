@@ -22,3 +22,8 @@ $big: "big";
 
 $max-width: 1440px;
 
+$animation: menu;
+$animDuration: 1s;
+$totalMenus: 14;
+$delay: $animDuration / $totalMenus;
+
