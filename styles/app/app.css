@@ -54,6 +54,10 @@
   transform: scale(1);
 }
 
+.likeFill:hover {
+  cursor: pointer;
+}
+
 /*END HEART*/
 /*SPINNER*/
 .loader {
@@ -490,6 +494,7 @@
 /*END*/
 html {
   font-family: Roboto;
+  cursor: default;
 }
 
 body {
@@ -752,6 +757,7 @@ a {
 }
 
 .explore__button {
+  cursor: pointer;
   border-radius: 10em;
   color: white;
   background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));

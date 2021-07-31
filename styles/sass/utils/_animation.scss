@@ -17,6 +17,7 @@
 
 .likeFill:hover {
   @extend %likeFillStatus;
+  cursor: pointer;
 }
 
 /*END HEART*/
