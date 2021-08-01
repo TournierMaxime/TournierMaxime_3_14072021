@@ -8,22 +8,22 @@
   src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 /*Ajuste la couleur du texte par rapport à la luminosité du background*/
-.mainMenu__header--heading h1, .mainMenu__section--subheading h1, .restaurant .description__title h1, .operation__title h1, .headerIndex__title h1 {
+.menu__subheading h1, .mainMenu__header--heading h1, .restaurant .description__title h1, .operation__title h1, .headerIndex__title h1 {
   font-size: 1.8em;
 }
-.mainMenu__header--heading h2, .mainMenu__section--subheading h2, .restaurant .description__title h2, .operation__title h2, .headerIndex__title h2 {
+.menu__subheading h2, .mainMenu__header--heading h2, .restaurant .description__title h2, .operation__title h2, .headerIndex__title h2 {
   font-size: 1.6em;
 }
-.mainMenu__header--heading h3, .mainMenu__section--subheading h3, .restaurant .description__title h3, .operation__title h3, .headerIndex__title h3 {
+.menu__subheading h3, .mainMenu__header--heading h3, .restaurant .description__title h3, .operation__title h3, .headerIndex__title h3 {
   font-size: 1.4em;
 }
-.mainMenu__header--heading h4, .mainMenu__section--subheading h4, .restaurant .description__title h4, .operation__title h4, .headerIndex__title h4 {
+.menu__subheading h4, .mainMenu__header--heading h4, .restaurant .description__title h4, .operation__title h4, .headerIndex__title h4 {
   font-size: 1.2em;
 }
-.mainMenu__header--heading h5, .mainMenu__section--subheading h5, .restaurant .description__title h5, .operation__title h5, .headerIndex__title h5 {
+.menu__subheading h5, .mainMenu__header--heading h5, .restaurant .description__title h5, .operation__title h5, .headerIndex__title h5 {
   font-size: 1em;
 }
-.mainMenu__header--heading h6, .mainMenu__section--subheading h6, .restaurant .description__title h6, .operation__title h6, .headerIndex__title h6 {
+.menu__subheading h6, .mainMenu__header--heading h6, .restaurant .description__title h6, .operation__title h6, .headerIndex__title h6 {
   font-size: 0.8em;
 }
 
@@ -217,163 +217,6 @@
 }
 /*END SPINNER*/
 /*MENU TRANSITION*/
-.menu {
-  padding: 1em;
-  flex-direction: row;
-  align-content: normal;
-  justify-content: normal;
-  align-items: normal;
-  flex-wrap: wrap;
-  display: flex;
-}
-.menu__delay {
-  -webkit-animation: menu 1s;
-          animation: menu 1s;
-  margin: 1em 0em;
-  width: 100%;
-  height: 100%;
-}
-.menu__delay:nth-child(0) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(1) {
-  -webkit-animation-delay: 0.0714285714s;
-          animation-delay: 0.0714285714s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(2) {
-  -webkit-animation-delay: 0.1428571429s;
-          animation-delay: 0.1428571429s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(3) {
-  -webkit-animation-delay: 0.2142857143s;
-          animation-delay: 0.2142857143s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(4) {
-  -webkit-animation-delay: 0.2857142857s;
-          animation-delay: 0.2857142857s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(5) {
-  -webkit-animation-delay: 0.3571428571s;
-          animation-delay: 0.3571428571s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(6) {
-  -webkit-animation-delay: 0.4285714286s;
-          animation-delay: 0.4285714286s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(7) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(8) {
-  -webkit-animation-delay: 0.5714285714s;
-          animation-delay: 0.5714285714s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(9) {
-  -webkit-animation-delay: 0.6428571429s;
-          animation-delay: 0.6428571429s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(10) {
-  -webkit-animation-delay: 0.7142857143s;
-          animation-delay: 0.7142857143s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(11) {
-  -webkit-animation-delay: 0.7857142857s;
-          animation-delay: 0.7857142857s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(12) {
-  -webkit-animation-delay: 0.8571428571s;
-          animation-delay: 0.8571428571s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.menu__delay:nth-child(13) {
-  -webkit-animation-delay: 0.9285714286s;
-          animation-delay: 0.9285714286s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
 @-webkit-keyframes menu {
   0% {
     transform: scaleY(0);
@@ -382,7 +225,6 @@
     transform: scaleY(1);
   }
 }
-
 @keyframes menu {
   0% {
     transform: scaleY(0);
@@ -536,8 +378,6 @@ a {
 }
 
 .headerIndex {
-  width: 100%;
-  height: auto;
   flex-direction: column;
   align-content: center;
   justify-content: normal;
@@ -700,7 +540,7 @@ a {
   max-height: 32em;
 }
 .mainMenu__section {
-  max-width: 1024px;
+  max-width: 768px;
   margin: auto;
   position: relative;
   top: -3em;
@@ -719,23 +559,6 @@ a {
 .mainMenu__section a {
   color: black;
 }
-.mainMenu__section--subheading {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1em;
-  line-height: 1;
-  font-family: Roboto;
-  position: relative;
-}
-.mainMenu__section--subheading::after {
-  content: "";
-  width: 2.5em;
-  height: 0.25em;
-  background-color: #99e2d0;
-  position: absolute;
-  left: 0;
-  bottom: -0.5em;
-}
 .mainMenu__header {
   flex-direction: row;
   align-content: normal;
@@ -743,7 +566,8 @@ a {
   align-items: normal;
   flex-wrap: wrap;
   display: flex;
-  padding: 1em;
+  width: 95%;
+  height: auto;
 }
 .mainMenu__header--heading {
   font-style: normal;
@@ -771,6 +595,181 @@ a {
   font-size: 1em;
   line-height: 1;
   font-family: Roboto;
+}
+
+.menu {
+  flex-direction: row;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.menu__subheading {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1;
+  font-family: Roboto;
+  position: relative;
+}
+.menu__subheading::after {
+  content: "";
+  width: 2.5em;
+  height: 0.25em;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: -0.5em;
+}
+.menu__delay {
+  -webkit-animation: menu 1s;
+          animation: menu 1s;
+  margin: 1em 0em;
+  width: 100%;
+  height: 100%;
+}
+.menu__delay:nth-child(0) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(1) {
+  -webkit-animation-delay: 0.0714285714s;
+          animation-delay: 0.0714285714s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(2) {
+  -webkit-animation-delay: 0.1428571429s;
+          animation-delay: 0.1428571429s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(3) {
+  -webkit-animation-delay: 0.2142857143s;
+          animation-delay: 0.2142857143s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(4) {
+  -webkit-animation-delay: 0.2857142857s;
+          animation-delay: 0.2857142857s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(5) {
+  -webkit-animation-delay: 0.3571428571s;
+          animation-delay: 0.3571428571s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(6) {
+  -webkit-animation-delay: 0.4285714286s;
+          animation-delay: 0.4285714286s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(7) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(8) {
+  -webkit-animation-delay: 0.5714285714s;
+          animation-delay: 0.5714285714s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(9) {
+  -webkit-animation-delay: 0.6428571429s;
+          animation-delay: 0.6428571429s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(10) {
+  -webkit-animation-delay: 0.7142857143s;
+          animation-delay: 0.7142857143s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(11) {
+  -webkit-animation-delay: 0.7857142857s;
+          animation-delay: 0.7857142857s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(12) {
+  -webkit-animation-delay: 0.8571428571s;
+          animation-delay: 0.8571428571s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.menu__delay:nth-child(13) {
+  -webkit-animation-delay: 0.9285714286s;
+          animation-delay: 0.9285714286s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .box {
@@ -914,5 +913,10 @@ a {
   .restaurant .box__img {
     width: 100%;
     height: 16em;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
   }
 }/*# sourceMappingURL=app.css.map */
