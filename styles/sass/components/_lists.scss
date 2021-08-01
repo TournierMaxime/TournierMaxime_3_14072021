@@ -2,17 +2,14 @@
 .operation__steps {
   @include margin($null);
   @include padding($null);
-
   @include flexbox(column, stretch);
   @include wh(95%);
-
   list-style: none;
   counter-reset: compteListe;
 
   &--step {
     @include wh(100%);
     @include backgroundAuto($colorOperation);
-
     position: relative;
     border-radius: 0.5em;
     box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
@@ -23,7 +20,6 @@
       @include wh(1.5em, 1.5em);
       @include backgroundAuto(#6100d8);
       @include flexbox(row, center, center);
-
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";
       position: absolute;
@@ -32,8 +28,10 @@
       border-radius: 100px;
       padding: 0.2em;
     }
+
     span {
       @include font(normal, bold);
     }
+    
   }
 }

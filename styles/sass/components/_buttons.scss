@@ -3,11 +3,7 @@
   cursor: pointer;
   border-radius: 10em;
   color: $white;
-  background: linear-gradient(
-    0deg,
-    rgba(147, 86, 220, 0.9),
-    rgba(255, 121, 218, 0.9)
-  );
+  background: linear-gradient(0deg,rgba(147, 86, 220, 0.9),rgba(255, 121, 218, 0.9));
   margin: 0 1em;
   @include padding($medium);
   border: none;

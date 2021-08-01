@@ -7,13 +7,11 @@
   &__img {
     @include border-radius-top(1em);
     @include wh(100%, 12em);
-
     object-fit: cover;
   }
 
   &__new {
     @include backgroundAuto(#99e2d0);
-
     position: absolute;
     top: 1em;
     right: 1em;
@@ -24,7 +22,6 @@
 
   &__cardFooter {
     @include flexbox(row, space-between);
-
     margin: 0 1em;
     padding: 1em 0;
     position: relative;
