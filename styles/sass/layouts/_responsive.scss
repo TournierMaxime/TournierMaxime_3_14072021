@@ -1,34 +1,47 @@
 @media screen and (min-width: 1024px) {
   .operation {
+
     &__title {
       @include margin($small);
     }
+
     &__steps {
       @include flexbox(row, normal, normal, normal, nowrap);
       @include wh(100%);
+
       &--step {
         margin: 0 1.5em;
       }
+
     }
   }
 
   .restaurant {
+
     &__title {
       @include margin($small);
     }
+
     &__menus {
       @include flexbox(row, normal, space-between);
       @include wh(100%);
+
       &--menu {
         @include wh(45%);
         @include padding($medium);
         @include margin($null);
       }
+
     }
+
     .box {
       &__img {
         @include wh(100%, 16em);
       }
     }
+  }
+
+  .menu {
+    @include wh(100%);
   }
 }
