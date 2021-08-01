@@ -1,8 +1,6 @@
 //Layout réutilisable du header
 .headerIndex {
-  @include wh(100%);
   @include flexbox(column, center);
-
   font-family: Shrikhand;
   text-align: center;
   position: relative;
