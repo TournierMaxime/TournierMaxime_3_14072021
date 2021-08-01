@@ -11,10 +11,6 @@
   }
 }
 
-%max-width {
-  max-width: $max-width;
-}
-
 %likeFillStatus {
   opacity: 1;
   background: linear-gradient(175deg, $primaryColor, $secondaryColor);
