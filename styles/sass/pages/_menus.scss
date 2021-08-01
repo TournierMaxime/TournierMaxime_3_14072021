@@ -1,11 +1,13 @@
 .mainMenu {
+
   &__img {
     @include wh(100%);
     object-fit: cover;
     max-height: 32em;
   }
+
   &__section {
-    max-width: 1024px;
+    max-width: 768px;
     margin: auto;
     position: relative;
     top: -3em;
@@ -13,28 +15,17 @@
     @include border-radius-top(2em);
     @include flexbox(column, normal, space-evenly);
     @include padding($small);
-    &--subheading {
-      @extend %all-headings;
-      @include font(normal, normal, 1em, 1, Roboto);
-      position: relative;
-      &::after {
-        content: "";
-        width: 2.5em;
-        height: 0.25em;
-        background-color: $thirdColor;
-        position: absolute;
-        left: 0;
-        bottom: -0.5em;
-      }
-    }
   }
+
   &__header {
     @include flexbox(row,normal,space-between);
-    @include padding($medium);
+    @include wh(95%);
+
     &--heading {
       @extend %all-headings;
       @include font(normal, normal, 1.4em, 1, Shrikhand);
     }
+
     &--heart {
       @include margin($medium);
     }
