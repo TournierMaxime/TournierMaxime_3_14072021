@@ -4,7 +4,6 @@
   @include wh(100%);
   @include flexbox(row, center, center, center);
   @include margin($null);
-
   padding: 1em 0;
 
   &__icon {
@@ -16,7 +15,6 @@
   @include wh(100%);
   @include flexbox(column, center, center, center);
   @include backgroundAuto($colorExplore);
-
   text-align: center;
   padding: 1em 0;
 
@@ -35,13 +33,13 @@
 
 .operation {
   @include flexbox(column);
-
   padding: 2em;
 
   &__title {
     @extend %all-headings;
     @include margin($null);
   }
+
   .iconStep {
     padding: 0 0.5em;
     @include margin($null);
@@ -51,7 +49,6 @@
 .restaurant {
   @include flexbox(column);
   @include backgroundAuto($colorRestaurant);
-
   padding: 2em;
 
   &__menus {
