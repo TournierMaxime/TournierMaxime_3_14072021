@@ -1,11 +1,4 @@
-@mixin flexbox(
-  $direction,
-  $content: normal,
-  $justify: normal,
-  $items: normal,
-  $wrap: wrap,
-  $display: flex
-) {
+@mixin flexbox($direction,$content: normal,$justify: normal,$items: normal,$wrap: wrap,$display: flex) {
   flex-direction: $direction;
   align-content: $content;
   justify-content: $justify;
@@ -63,19 +56,15 @@
 
 /*Ajuste la couleur du texte par rapport à la luminosité du background*/
 @mixin backgroundAuto($bgColor) {
+
   @if lightness($bgColor) > 50% {
     background-color: $bgColor;
     color: black;
+    a {color: black;}
 
-    a {
-      color: black;
-    }
   } @else {
     background-color: $bgColor;
     color: white;
-
-    a {
-      color: white;
-    }
+    a {color: white;}
   }
 }
