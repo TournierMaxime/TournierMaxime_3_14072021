@@ -1,0 +1,21 @@
+
+.likeEmpty {
+    content: "";
+    position: absolute;
+  }
+  
+  .likeEmpty:hover {
+    display: none;
+  }
+  
+  .likeFill {
+    position: absolute;
+    content: "";
+    opacity: 0;
+    transform: scale(1);
+  }
+  
+  .likeFill:hover {
+    @extend %likeFillStatus;
+    cursor: pointer;
+  }
