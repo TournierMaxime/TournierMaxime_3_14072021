@@ -44,4 +44,10 @@
   .menu {
     @include wh(100%);
   }
+
+  .mainMenu {
+    &__img {
+      @include wh(100%, 30vw);
+    }
+  }
 }
