@@ -308,7 +308,7 @@ a {
 }
 .mainMenu__img {
   width: 100vw;
-  height: auto;
+  height: 25vh;
   -o-object-fit: cover;
      object-fit: cover;
   max-height: 32em;
