@@ -2,7 +2,7 @@
   background-color: white;
 
   &__img {
-    @include wh(100vw);
+    @include wh(100vw,25vh);
     object-fit: cover;
     max-height: 32em;
   }
