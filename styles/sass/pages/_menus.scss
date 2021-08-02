@@ -2,7 +2,7 @@
   background-color: white;
 
   &__img {
-    @include wh(100%,70vw);
+    @include wh(100vw);
     object-fit: cover;
     max-height: 32em;
   }
@@ -16,6 +16,7 @@
     @include border-radius-top(2em);
     @include flexbox(column, normal, space-evenly);
     @include padding($big);
+    @include wh(85vw);
   }
 
   &__header {
