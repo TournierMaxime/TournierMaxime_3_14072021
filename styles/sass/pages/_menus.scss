@@ -9,13 +9,12 @@
 
   &__section {
     max-width: 768px;
-    margin: 0em auto -3em auto;
+    @include margin-padding(notall, 0 auto -3em auto, all, 1.5em);
     position: relative;
-    top: -3em;
+    @include trbl(-3em);
     @include backgroundAuto($mainColor);
     @include border-radius-top(2em);
     @include flexbox(column, normal, space-evenly);
-    @include padding($big);
     @include wh(85vw);
   }
 
@@ -29,7 +28,7 @@
     }
 
     &--heart {
-      @include margin($medium);
+      @include margin-padding(all, 1em, all, 0);
     }
   }
 }

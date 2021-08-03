@@ -1,6 +1,5 @@
 .loader {
     position: fixed;
-  
     @include flexbox(row, center, center, center);
     @include wh(100%, 100%);
     background-color: hsla(0, 0%, 100%, 0.9);
@@ -13,6 +12,7 @@
       transform-origin: 3em;
       @include wh(1em, 1em);
       border-radius: 1em;
+      @include margin-padding(notall, 0 0 0 -4em, all, 0);
   
       @for $i from 1 to length($colors) {
         &:nth-child(#{length($colors)}n + #{$i}) {

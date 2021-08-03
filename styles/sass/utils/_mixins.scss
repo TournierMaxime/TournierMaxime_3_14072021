@@ -7,27 +7,16 @@
   display: $display;
 }
 
-@mixin margin($value) {
-  @if $value == $small {
-    margin: .5em;
-  } @else if $value == $medium {
-    margin: 1em;
-  } @else if $value == $big {
-    margin: 1.5em;
-  } @else if $value == $null {
-    margin: 0;
+@mixin margin-padding($m-direction, $m-amount, $p-direction, $p-amount) {
+  @if $m-direction == all {
+    margin: $m-amount;
+  } @else if $m-direction == notall {
+    margin: $m-amount;
   }
-}
-
-@mixin padding($value) {
-  @if $value == $small {
-    padding: .5em;
-  } @else if $value == $medium {
-    padding: 1em;
-  } @else if $value == $big {
-    padding: 1.5em;
-  } @else if $value == $null {
-    padding: 0;
+  @if $p-direction == all {
+    padding: $p-amount;
+  } @else if $p-direction == notall {
+    padding: $p-amount;
   }
 }
 
@@ -54,6 +43,21 @@
   height: $h;
 }
 
+@mixin trbl($top:0em, $right:0em, $bottom:0em, $left:0em) {
+  @if $top != 0em {
+    top: $top;
+  }
+  @if $right != 0em {
+    right: $right;
+  }
+  @if $bottom != 0em {
+    bottom: $bottom;
+  }
+  @if $left != 0em {
+    left: $left;
+  }
+}
+
 /*Ajuste la couleur du texte par rapport à la luminosité du background*/
 @mixin backgroundAuto($bgColor) {
 
@@ -67,4 +71,9 @@
     color: white;
     a {color: white;}
   }
+}
+
+@mixin responsiveContentCentered {
+  max-width: 1440px;
+  margin: auto;
 }

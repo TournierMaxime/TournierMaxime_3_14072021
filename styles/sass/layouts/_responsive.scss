@@ -1,8 +1,12 @@
 @media screen and (min-width: 1024px) {
+
   .operation {
 
+    @include responsiveContentCentered;
+    @include wh(100%);
+
     &__title {
-      @include margin($small);
+      @include margin-padding(all, .5em, all, 0);
     }
 
     &__steps {
@@ -10,7 +14,8 @@
       @include wh(100%);
 
       &--step {
-        margin: 0 1.5em;
+        @include margin-padding(all, 0 1.5em, all, 0);
+        @include wh(30%);
       }
 
     }
@@ -18,8 +23,10 @@
 
   .restaurant {
 
+    @include responsiveContentCentered;
+
     &__title {
-      @include margin($small);
+      @include margin-padding(all, 0.5em, all, 0);
     }
 
     &__menus {
@@ -28,8 +35,7 @@
 
       &--menu {
         @include wh(45%);
-        @include padding($medium);
-        @include margin($null);
+        @include margin-padding(all, 0, all, 1em);
       }
 
     }
@@ -41,13 +47,19 @@
     }
   }
 
+  .footer {
+    &__ul {
+      @include responsiveContentCentered;
+    }
+  }
+
   .menu {
     @include wh(100%);
   }
 
   .mainMenu {
     &__img {
-      @include wh(100%, 30vw);
+      @include wh(100%, 30vh);
     }
   }
 }

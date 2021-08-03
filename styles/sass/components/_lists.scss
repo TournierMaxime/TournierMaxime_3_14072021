@@ -1,7 +1,6 @@
 //Liste de la page d'accueil partie fonctionnement
 .operation__steps {
-  @include margin($null);
-  @include padding($null);
+  @include margin-padding(all, 0, all, 0);
   @include flexbox(column, stretch);
   @include wh(95%);
   list-style: none;
@@ -13,8 +12,7 @@
     position: relative;
     border-radius: 0.5em;
     box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
-    margin: 1em 0;
-    padding: 1.5em 1em;
+    @include margin-padding(all, 1em 0, all, 1.5em 1em);
 
     &::before {
       @include wh(1.5em, 1.5em);
@@ -23,8 +21,7 @@
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";
       position: absolute;
-      top: 1em;
-      left: -1em;
+      @include trbl(1em,0em,0em,-1em);
       border-radius: 100px;
       padding: 0.2em;
     }
