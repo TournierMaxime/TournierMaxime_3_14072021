@@ -7,7 +7,7 @@
   display: $display;
 }
 
-@mixin margin-padding($m-direction, $m-amount, $p-direction, $p-amount) {
+@mixin margin-padding($m-direction:all, $m-amount:0, $p-direction:all, $p-amount:0) {
   @if $m-direction == all {
     margin: $m-amount;
   } @else if $m-direction == notall {
