@@ -918,12 +918,13 @@ a {
 @media screen and (min-width: 1024px) {
   .operation {
     max-width: 1440px;
-    margin: auto;
     width: 100%;
     height: auto;
+    margin: auto;
+    padding: 0;
   }
   .operation__title {
-    margin: 0.5em;
+    margin: 0.5em 1em;
     padding: 0;
   }
   .operation__steps {
@@ -938,7 +939,7 @@ a {
   }
   .operation__steps--step {
     margin: 0 1.5em;
-    padding: 0;
+    padding: 1.5em;
     width: 30%;
     height: auto;
   }
