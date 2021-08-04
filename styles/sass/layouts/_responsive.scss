@@ -2,11 +2,12 @@
 
   .operation {
 
-    @include responsiveContentCentered;
+    max-width: 1440px;
     @include wh(100%);
+    @include margin-padding(all, auto, all, 0);
 
     &__title {
-      @include margin-padding(all, .5em, all, 0);
+      @include margin-padding(all, .5em 1em, all, 0);
     }
 
     &__steps {
@@ -14,7 +15,7 @@
       @include wh(100%);
 
       &--step {
-        @include margin-padding(all, 0 1.5em, all, 0);
+        @include margin-padding(all, 0 1.5em, all, 1.5em);
         @include wh(30%);
       }
 
