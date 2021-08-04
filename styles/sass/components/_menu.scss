@@ -74,7 +74,7 @@
     }
   
     &:hover &__confirmation {
-      @include margin-padding(notall, 0 -1em 0 0, all, 0);
+      margin-right: -1em;
     }
   
     &__wrapIcon {
