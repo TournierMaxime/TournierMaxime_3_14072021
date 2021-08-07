@@ -43,7 +43,7 @@
   height: $h;
 }
 
-@mixin trbl($top:0em, $right:0em, $bottom:0em, $left:0em) {
+@mixin trblp($top:0em, $right:0em, $bottom:0em, $left:0em, $position:unset) {
   @if $top != 0em {
     top: $top;
   }
@@ -56,6 +56,7 @@
   @if $left != 0em {
     left: $left;
   }
+  position:$position;
 }
 
 /*Ajuste la couleur du texte par rapport à la luminosité du background*/
