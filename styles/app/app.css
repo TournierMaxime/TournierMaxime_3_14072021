@@ -348,8 +348,8 @@ a {
   max-width: 768px;
   margin: 0 auto -3em auto;
   padding: 1.5em;
-  position: relative;
   top: -3em;
+  position: relative;
   background-color: #f6f6f6;
   color: black;
   border-top-left-radius: 2em;
@@ -574,9 +574,9 @@ a {
   width: 2.5em;
   height: 0.25em;
   background-color: #99e2d0;
-  position: absolute;
   bottom: -0.5em;
   left: 0.1em;
+  position: absolute;
 }
 .menu__delay {
   -webkit-animation: menu 1s;
@@ -828,10 +828,10 @@ a {
 .box__new {
   background-color: #99e2d0;
   color: black;
-  position: absolute;
   top: 1em;
   right: 1em;
-  color: #1d9e7e;
+  position: absolute;
+  color: #1b6150;
   border-radius: 0.2em;
   margin: 0;
   padding: 0.5em;
@@ -851,9 +851,9 @@ a {
   position: relative;
 }
 .box__cardFooter--right {
-  position: absolute;
   top: 0.5em;
   right: 2em;
+  position: absolute;
 }
 
 .operation__steps {
@@ -897,10 +897,11 @@ a {
   display: flex;
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
-  position: absolute;
   top: 1em;
   left: -1em;
+  position: absolute;
   border-radius: 100px;
+  margin: 0;
   padding: 0.2em;
 }
 .operation__steps--step::before a {
