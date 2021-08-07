@@ -20,3 +20,10 @@
   transform: scale(1.2);
   transition: transform 0.5s ease;
 }
+
+%ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+

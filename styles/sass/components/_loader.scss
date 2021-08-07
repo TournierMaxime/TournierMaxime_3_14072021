@@ -1,0 +1,28 @@
+.loader {
+    @include trblp(0em,0em,0em,0em,fixed);
+    @include flexbox(row, center, center, center);
+    @include wh(100%, 100%);
+    background-color: hsla(0, 0%, 100%, 0.9);
+    animation: loaderDisappear 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    z-index: 10;
+    &__item {
+      animation: loader 1s linear;
+      transform-origin: 3em;
+      @include wh(1em, 1em);
+      border-radius: 1em;
+      @include margin-padding(notall, 0 0 0 -4em, all, 0);
+  
+      @for $i from 1 to length($colors) {
+        &:nth-child(#{length($colors)}n + #{$i}) {
+          animation-delay: #{$i/length($colors)}s;
+          animation-direction: normal;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease;
+          background: nth($colors, $i);
+          @include trblp(0em,0em,0em,0em,absolute);
+        }
+      }
+    }
+  }

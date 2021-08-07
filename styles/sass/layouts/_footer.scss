@@ -1,24 +1,24 @@
 //Layout réutilisable du footer
 .footer {
   @include backgroundAuto(rgb(20, 20, 20));
-  padding: 1em 3em;
+  @include margin-padding(all, 0, all, 1em 3em);
 
   &__ul {
     &--headTitle {
       @include font(normal, normal, 1.2em, 1, Shrikhand);
-      margin-bottom: 1em;
+      @include margin-padding(notall, 0 0 1em 0, all, 0);
     }
 
     &--li {
       @include font(normal, normal);
-      margin: 0.5em 0;
+      @include margin-padding(all, .5em 0, all, 0);
     }
 
     .footerLink {
       text-decoration: none;
       
       &__icon {
-        margin-right: 1em;
+        @include margin-padding(all, 0 1em 0 0, all, 0);
         @include wh(1em);
       }
     }

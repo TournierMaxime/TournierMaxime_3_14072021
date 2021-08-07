@@ -3,11 +3,10 @@
   @include backgroundAuto($colorLocation);
   @include wh(100%);
   @include flexbox(row, center, center, center);
-  @include margin($null);
-  padding: 1em 0;
+  @include margin-padding(all, 0, all, 1em 0);
 
   &__icon {
-    margin: 0 1em;
+    @include margin-padding(all, 0 1em, all, 0);
   }
 }
 
@@ -16,7 +15,7 @@
   @include flexbox(column, center, center, center);
   @include backgroundAuto($colorExplore);
   text-align: center;
-  padding: 1em 0;
+  @include margin-padding(all, 0, all, 1em 0);
 
   &__title {
     @include font(normal, bold, 1.6em);
@@ -28,38 +27,37 @@
 }
 
 .iconStep {
-  margin-right: 1em;
+  @include margin-padding(notall, 0 1em 0 0, all, 0);
 }
 
 .operation {
   @include flexbox(column);
-  padding: 2em;
+  @include margin-padding(all, 0, all, 1.5em);
 
   &__title {
     @extend %all-headings;
-    @include margin($null);
+    @include margin-padding(all, 0, all, 0);
   }
 
   .iconStep {
-    padding: 0 0.5em;
-    @include margin($null);
+    @include margin-padding(all, 0, all, 0 .5em);
   }
 }
 
 .restaurant {
   @include flexbox(column);
   @include backgroundAuto($colorRestaurant);
-  padding: 2em;
+  @include margin-padding(all, 0, all, 1.5em);
 
   &__menus {
-    @include padding($null);
+    @include margin-padding(all, 0, all, 0);
     &--menu {
-      margin: 1em 0;
+      @include margin-padding(all, 1em 0, all, 0);
     }
   }
 
   .description__title {
     @extend %all-headings;
-    @include margin($null);
+    @include margin-padding(all, 0, all, 0);
   }
 }

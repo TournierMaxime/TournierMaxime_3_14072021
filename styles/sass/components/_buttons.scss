@@ -4,8 +4,7 @@
   border-radius: 10em;
   color: $white;
   background: linear-gradient(0deg,rgba(147, 86, 220, 0.9),rgba(255, 121, 218, 0.9));
-  margin: 0 1em;
-  @include padding($medium);
+  @include margin-padding(all, 0 1em, all, 1em);
   border: none;
   box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
   text-align: center;

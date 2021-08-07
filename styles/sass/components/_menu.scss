@@ -4,22 +4,19 @@
     &__subheading {
       @extend %all-headings;
       @include font(normal, normal, 1em, 1, Roboto);
-      position: relative;
+      @include trblp(0em,0em,0em,0em,relative);
   
       &::after {
         content: "";
-        width: 2.5em;
-        height: 0.25em;
+        @include wh(2.5em,.25em);
         background-color: $thirdColor;
-        position: absolute;
-        left: 0;
-        bottom: -0.5em;
+        @include trblp(0em,0em,-0.5em,0.1em,absolute);
       }
   
     }
     &__delay {
       animation: $animation $animDuration;
-      margin: 1em 0em;
+      @include margin-padding(all, 1em 0, all, 0);
       @include wh(100%, 100%);
   
       @for $i from 0 to $totalMenus {
@@ -30,5 +27,68 @@
           animation-fill-mode: both;
         }
       }
+    }
+  }
+
+  .menuItem {
+    background-color: white;
+    @include margin-padding(all, 0, all, 1em);
+    @include flexbox(row);
+    border-radius: 0.75em;
+    box-shadow: 0.25em 0.25em 1em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear 0.6s;
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    &__header {
+      @extend %ellipsis;
+      flex: 1;
+    }
+  
+    &__title {
+      @include margin-padding(all, 0, all, 0);
+      @extend %ellipsis;
+    }
+  
+    &__description {
+      @include margin-padding(all, 0, all, 0);
+      @extend %ellipsis;
+    }
+  
+    &__price {
+      @include font(normal,bold);
+      @include flexbox(row,normal,flex-end,flex-end);
+      padding-left: 1em;
+    }
+  
+    &__confirmation {
+      background-color: $thirdColor;
+      @include margin-padding(notall, -1em -5em -1em 1em, all, 0);
+      @include wh(4em);
+      @include flexbox(row,normal,center,center);
+      transition-duration: 0.5s;
+    }
+  
+    &:hover &__confirmation {
+      margin-right: -1em;
+    }
+  
+    &__wrapIcon {
+      @include wh(1.6em,1.6em);
+      background-color: white;
+      @include flexbox(row,normal,center,center);
+      border-radius: 100px;
+      transform: rotate(180deg);
+      transition-duration: 0.5s;
+    }
+  
+    &:hover &__wrapIcon {
+      transform: rotate(0);
+    }
+  
+    &__icon {
+      color: $thirdColor;
     }
   }

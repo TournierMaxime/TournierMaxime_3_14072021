@@ -1,20 +1,20 @@
 .mainMenu {
+  background-color: white;
 
   &__img {
-    @include wh(100%);
+    @include wh(100vw,25vh);
     object-fit: cover;
     max-height: 32em;
   }
 
   &__section {
     max-width: 768px;
-    margin: auto;
-    position: relative;
-    top: -3em;
+    @include margin-padding(notall, 0 auto -3em auto, all, 1.5em);
+    @include trblp(-3em,0em,0em,0em,relative);
     @include backgroundAuto($mainColor);
     @include border-radius-top(2em);
     @include flexbox(column, normal, space-evenly);
-    @include padding($small);
+    @include wh(85vw);
   }
 
   &__header {
@@ -27,7 +27,7 @@
     }
 
     &--heart {
-      @include margin($medium);
+      @include margin-padding(all, 1em, all, 0);
     }
   }
 }

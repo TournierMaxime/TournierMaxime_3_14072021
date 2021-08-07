@@ -1,29 +1,28 @@
 //Balise générique utilisé sur les différentes pages
 html {
-  font-family: Roboto;
+  @include font(normal, normal, 1em,  1, Roboto);
   cursor: default;
 }
 
 body {
   @include wh(100%);
   @include flexbox(column);
-  @include margin($null);
+  @include margin-padding(all, 0, all, 0);
   background-color: $mainColor;
 }
 
 main {
-  @include margin($null);
+  @include margin-padding(all, 0, all, 0);
   @include flexbox(column);
 }
 
 ul {
   list-style-type: none;
-  @include margin($null);
-  @include padding($null);
+  @include margin-padding(all, 0, all, 0);
 }
 
 p {
-  margin: 0.5em 0;
+  @include margin-padding(all, .5em 0, all, 0);
 }
 
 a {
