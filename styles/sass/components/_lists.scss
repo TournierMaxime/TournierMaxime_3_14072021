@@ -9,7 +9,7 @@
   &--step {
     @include wh(100%);
     @include backgroundAuto($colorOperation);
-    position: relative;
+    @include trblp(0em,0em,0em,0em,relative);
     border-radius: 0.5em;
     box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
     @include margin-padding(all, 1em 0, all, 1.5em 1em);
@@ -20,10 +20,9 @@
       @include flexbox(row, center, center);
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";
-      position: absolute;
-      @include trbl(1em,0em,0em,-1em);
+      @include trblp(1em,0em,0em,-1em,absolute);
       border-radius: 100px;
-      padding: 0.2em;
+      @include margin-padding(all, 0, all, .2em);
     }
 
     span {

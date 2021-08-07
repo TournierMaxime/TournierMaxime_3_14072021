@@ -4,14 +4,13 @@
     &__subheading {
       @extend %all-headings;
       @include font(normal, normal, 1em, 1, Roboto);
-      position: relative;
+      @include trblp(0em,0em,0em,0em,relative);
   
       &::after {
         content: "";
         @include wh(2.5em,.25em);
         background-color: $thirdColor;
-        position: absolute;
-        @include trbl(0em,0em,-0.5em,0.1em);
+        @include trblp(0em,0em,-0.5em,0.1em,absolute);
       }
   
     }
@@ -43,7 +42,6 @@
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation-fill-mode: both;
     transform: scale(0);
-  //répitition à mettre dans un placeholder
     &__header {
       @extend %ellipsis;
       flex: 1;

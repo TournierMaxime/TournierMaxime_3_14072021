@@ -1,5 +1,5 @@
 .loader {
-    position: fixed;
+    @include trblp(0em,0em,0em,0em,fixed);
     @include flexbox(row, center, center, center);
     @include wh(100%, 100%);
     background-color: hsla(0, 0%, 100%, 0.9);
@@ -21,7 +21,7 @@
           animation-fill-mode: forwards;
           animation-timing-function: ease;
           background: nth($colors, $i);
-          position: absolute;
+          @include trblp(0em,0em,0em,0em,absolute);
         }
       }
     }
