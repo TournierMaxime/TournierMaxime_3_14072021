@@ -3,7 +3,7 @@
   @include flexbox(column, center);
   @include font(normal,normal,1em,1,Shrikhand);
   text-align: center;
-  position: relative;
+  @include trblp(0em,0em,0em,0em,relative);
   box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.25);
 
   &__title {
