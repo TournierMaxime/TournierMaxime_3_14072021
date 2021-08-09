@@ -3,10 +3,14 @@
   cursor: pointer;
   border-radius: 10em;
   color: $white;
-  background: linear-gradient(0deg,rgba(147, 86, 220, 0.9),rgba(255, 121, 218, 0.9));
+  background: $linearGradientDark;
   @include margin-padding(all, 0 1em, all, 1em);
   border: none;
-  box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  box-shadow: $boxShadowLight;
   text-align: center;
   @include font(normal, bold);
+  &:hover {
+    background: $linearGradientLight;
+    box-shadow: $boxShadowDark;
+  }
 }
