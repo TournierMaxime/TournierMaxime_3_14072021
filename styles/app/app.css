@@ -908,9 +908,9 @@ a {
   margin: 0;
   padding: 0.2em;
 }
-.operation__steps--step::before a {
+/*.operation__steps--step::before a {
   color: white;
-}
+}*/
 .operation__steps--step span {
   font-style: normal;
   font-weight: bold;
