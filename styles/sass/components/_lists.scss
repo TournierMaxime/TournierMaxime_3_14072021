@@ -1,28 +1,28 @@
 //Liste de la page d'accueil partie "Fonctionnement"
 .operation__steps {
-  @include margin-padding(all, 0, all, 0);
+  @include marginPadding($allDirections, 0, $allDirections, 0);
   @include flexbox(column, stretch);
-  @include wh(95%);
+  @include widthHeight(95%);
   list-style: none;
   counter-reset: compteListe;
 
   &--step {
-    @include wh(100%);
+    @include widthHeight(100%);
     @include backgroundAuto($colorOperation);
-    @include trblp(0em,0em,0em,0em,relative);
+    @include positionElement(0em,0em,0em,0em,relative);
     border-radius: 0.5em;
     box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
-    @include margin-padding(all, 1em 0, all, 1.5em 1em);
+    @include marginPadding($allDirections, 1em 0, $allDirections, 1.5em 1em);
 
     &::before {
-      @include wh(1.5em, 1.5em);
+      @include widthHeight(1.5em, 1.5em);
       @include backgroundAuto(#6100d8);
       @include flexbox(row, center, center);
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";
-      @include trblp(1em,0em,0em,-1em,absolute);
+      @include positionElement(1em,0em,0em,-1em,absolute);
       border-radius: 100px;
-      @include margin-padding(all, 0, all, .2em);
+      @include marginPadding($allDirections, 0, $allDirections, .2em);
     }
 
     span {

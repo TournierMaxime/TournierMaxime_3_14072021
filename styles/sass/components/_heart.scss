@@ -1,7 +1,7 @@
 //Bouton J'aime
 .likeEmpty {
     content: "";
-    @include trblp(0em,0em,0em,0em,absolute);
+    @include positionElement(0em,0em,0em,0em,absolute);
   }
   
   .likeEmpty:hover {
@@ -9,7 +9,7 @@
   }
   
   .likeFill {
-    @include trblp(0em,0em,0em,0em,absolute);
+    @include positionElement(0em,0em,0em,0em,absolute);
     content: "";
     opacity: 0;
     transform: scale(1);

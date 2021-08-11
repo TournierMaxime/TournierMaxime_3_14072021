@@ -2,29 +2,29 @@
 .box {
   background-color: $white;
   border-radius: 1em;
-  @include trblp(0em,0em,0em,0em,relative);
+  @include positionElement(0em,0em,0em,0em,relative);
 
   &__img {
-    @include border-radius-top(1em);
-    @include wh(100%, 12em);
+    @include borderRadiusTop(1em);
+    @include widthHeight(100%, 12em);
     object-fit: cover;
   }
 
   &__new {
     @include backgroundAuto(#99e2d0);
-    @include trblp(1em,1em,0em,0em,absolute);
+    @include positionElement(1em,1em,0em,0em,absolute);
     color: $darkerThirdColor;
     border-radius: 0.2em;
-    @include margin-padding(all, 0, all, .5em);
+    @include marginPadding($allDirections, 0, $allDirections, .5em);
   }
 
   &__cardFooter {
     @include flexbox(row, space-between);
-    @include margin-padding(all, 0 1em, all, 1em 0);
-    @include trblp(0em,0em,0em,0em,relative);
+    @include marginPadding($allDirections, 0 1em, $allDirections, 1em 0);
+    @include positionElement(0em,0em,0em,0em,relative);
 
     &--right {
-      @include trblp(.5em,2em,0em,0em,absolute);
+      @include positionElement(.5em,2em,0em,0em,absolute);
     }
   }
 }
