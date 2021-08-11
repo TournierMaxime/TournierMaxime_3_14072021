@@ -3,20 +3,20 @@
   .operation {
 
     max-width: 1440px;
-    @include wh(100%);
-    @include margin-padding(all, auto, all, 0);
+    @include widthHeight(100%);
+    @include marginPadding($allDirections, auto, $allDirections, 0);
 
     &__title {
-      @include margin-padding(all, .5em 1em, all, 0);
+      @include marginPadding($allDirections, .5em 1em, $allDirections, 0);
     }
 
     &__steps {
       @include flexbox(row, normal, normal, normal, nowrap);
-      @include wh(100%);
+      @include widthHeight(100%);
 
       &--step {
-        @include margin-padding(all, 0 1.5em, all, 1.5em);
-        @include wh(30%);
+        @include marginPadding($allDirections, 0 1.5em, $allDirections, 1.5em);
+        @include widthHeight(30%);
       }
 
     }
@@ -27,23 +27,23 @@
     @include responsiveContentCentered;
 
     &__title {
-      @include margin-padding(all, 0.5em, all, 0);
+      @include marginPadding($allDirections, 0.5em, $allDirections, 0);
     }
 
     &__menus {
       @include flexbox(row, normal, space-between);
-      @include wh(100%);
+      @include widthHeight(100%);
 
       &--menu {
-        @include wh(45%);
-        @include margin-padding(all, 0, all, 1em);
+        @include widthHeight(45%);
+        @include marginPadding($allDirections, 0, $allDirections, 1em);
       }
 
     }
 
     .box {
       &__img {
-        @include wh(100%, 16em);
+        @include widthHeight(100%, 16em);
       }
     }
   }
@@ -55,12 +55,12 @@
   }
 
   .menu {
-    @include wh(100%);
+    @include widthHeight(100%);
   }
 
   .mainMenu {
     &__img {
-      @include wh(100%, 30vh);
+      @include widthHeight(100%, 30vh);
     }
   }
 }
