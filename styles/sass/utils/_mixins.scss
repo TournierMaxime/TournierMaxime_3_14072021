@@ -1,3 +1,5 @@
+
+
 @mixin flexbox($direction,$content: normal,$justify: normal,$items: normal,$wrap: wrap,$display: flex) {
   flex-direction: $direction;
   align-content: $content;
@@ -7,25 +9,25 @@
   display: $display;
 }
 
-@mixin margin-padding($m-direction:all, $m-amount:0, $p-direction:all, $p-amount:0) {
-  @if $m-direction == all {
+@mixin marginPadding($m-direction:$allDirections, $m-amount:0, $p-direction:$allDirections, $p-amount:0) {
+  @if $m-direction == $allDirections {
     margin: $m-amount;
-  } @else if $m-direction == notall {
+  } @else if $m-direction == $specificDirections {
     margin: $m-amount;
   }
-  @if $p-direction == all {
+  @if $p-direction == $allDirections {
     padding: $p-amount;
-  } @else if $p-direction == notall {
+  } @else if $p-direction == $specificDirections {
     padding: $p-amount;
   }
 }
 
-@mixin border-radius-top($size) {
+@mixin borderRadiusTop($size) {
   border-top-left-radius: $size;
   border-top-right-radius: $size;
 }
 
-@mixin border-radius-bottom($size) {
+@mixin borderRadiusBottom($size) {
   border-bottom-left-radius: $size;
   border-bottom-right-radius: $size;
 }
@@ -38,12 +40,12 @@
   font-family: $font-family;
 }
 
-@mixin wh($w, $h: auto) {
+@mixin widthHeight($w, $h: auto) {
   width: $w;
   height: $h;
 }
 
-@mixin trblp($top:0em, $right:0em, $bottom:0em, $left:0em, $position:unset) {
+@mixin positionElement($top:0em, $right:0em, $bottom:0em, $left:0em, $position:unset) {
   @if $top != 0em {
     top: $top;
   }
@@ -73,6 +75,8 @@
     a {color: white;}
   }
 }
+
+//Utilisation dans les media queries
 
 @mixin responsiveContentCentered {
   max-width: 1440px;
