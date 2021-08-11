@@ -5,24 +5,24 @@ html {
 }
 
 body {
-  @include wh(100%);
+  @include widthHeight(100%);
   @include flexbox(column);
-  @include margin-padding(all, 0, all, 0);
+  @include marginPadding($allDirections, 0, $allDirections, 0);
   background-color: $mainColor;
 }
 
 main {
-  @include margin-padding(all, 0, all, 0);
+  @include marginPadding($allDirections, 0, $allDirections, 0);
   @include flexbox(column);
 }
 
 ul {
   list-style-type: none;
-  @include margin-padding(all, 0, all, 0);
+  @include marginPadding($allDirections, 0, $allDirections, 0);
 }
 
 p {
-  @include margin-padding(all, .5em 0, all, 0);
+  @include marginPadding($allDirections, .5em 0, $allDirections, 0);
 }
 
 a {
