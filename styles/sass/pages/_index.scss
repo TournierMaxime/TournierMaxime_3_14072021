@@ -1,21 +1,21 @@
 
 .location {
   @include backgroundAuto($colorLocation);
-  @include wh(100%);
+  @include widthHeight(100%);
   @include flexbox(row, center, center, center);
-  @include margin-padding(all, 0, all, 1em 0);
+  @include marginPadding($allDirections, 0, $allDirections, 1em 0);
 
   &__icon {
-    @include margin-padding(all, 0 1em, all, 0);
+    @include marginPadding($allDirections, 0 1em, $allDirections, 0);
   }
 }
 
 .explore {
-  @include wh(100%);
+  @include widthHeight(100%);
   @include flexbox(column, center, center, center);
   @include backgroundAuto($colorExplore);
   text-align: center;
-  @include margin-padding(all, 0, all, 1em 0);
+  @include marginPadding($allDirections, 0, $allDirections, 1em 0);
 
   &__title {
     @include font(normal, bold, 1.6em);
@@ -25,39 +25,39 @@
     @include font(normal, 300, 1.4em);
   }
 }
-
+ 
 .iconStep {
-  @include margin-padding(notall, 0 1em 0 0, all, 0);
+  @include marginPadding($specificDirections, 0 1em 0 0, $allDirections, 0);
 }
 
 .operation {
   @include flexbox(column);
-  @include margin-padding(all, 0, all, 1.5em);
+  @include marginPadding($allDirections, 0, $allDirections, 1.5em);
 
   &__title {
     @extend %all-headings;
-    @include margin-padding(all, 0, all, 0);
+    @include marginPadding($allDirections, 0, $allDirections, 0);
   }
 
   .iconStep {
-    @include margin-padding(all, 0, all, 0 .5em);
+    @include marginPadding($allDirections, 0, $allDirections, 0 .5em);
   }
 }
 
 .restaurant {
   @include flexbox(column);
   @include backgroundAuto($colorRestaurant);
-  @include margin-padding(all, 0, all, 1.5em);
+  @include marginPadding($allDirections, 0, $allDirections, 1.5em);
 
   &__menus {
-    @include margin-padding(all, 0, all, 0);
+    @include marginPadding($allDirections, 0, $allDirections, 0);
     &--menu {
-      @include margin-padding(all, 1em 0, all, 0);
+      @include marginPadding($allDirections, 1em 0, $allDirections, 0);
     }
   }
 
   .description__title {
     @extend %all-headings;
-    @include margin-padding(all, 0, all, 0);
+    @include marginPadding($allDirections, 0, $allDirections, 0);
   }
 }
