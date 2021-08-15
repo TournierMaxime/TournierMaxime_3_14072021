@@ -1,6 +1,5 @@
 //Spinner page d'accueil
 .loader {
-
     @include positionElement(0em,0em,0em,0em,fixed);
     @include flexbox(row, center, center, center);
     @include widthHeight(100%, 100%);
@@ -10,8 +9,7 @@
     animation-fill-mode: both;
     z-index: 10;
 
-    &__item {
-      
+    &__item {  
       animation: loader 1s linear;
       transform-origin: 3em;
       @include widthHeight(1em, 1em);
@@ -22,12 +20,14 @@
   
       @for $i from 1 to length($colors) {
         &:nth-child(#{length($colors)}n + #{$i}) {
+
           animation-delay: #{$i/length($colors)}s;
           animation-direction: normal;
           animation-fill-mode: forwards;
           animation-timing-function: ease;
           background: nth($colors, $i);
           @include positionElement(0em,0em,0em,0em,absolute);
+          
         }
       }
     }

@@ -1,17 +1,25 @@
+/*
+Couleurs du projet à respecter
+*/
 $primaryColor: #9356dc;
 $secondaryColor: #ff79da;
 $thirdColor: #99e2d0;
+//Couleur du texte pour les vignettes "nouveau"
 $darkerThirdColor: #1b6150;
 
+//Liste de couleurs du loader
 $colors: $primaryColor, $secondaryColor, $thirdColor, $primaryColor,
   $secondaryColor, $thirdColor, $primaryColor, $secondaryColor, $thirdColor;
 
+//Gradients linéaire sombre ou clair pour le boutton explorer/commander
 $linearGradientDark: linear-gradient(0deg,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
 $linearGradientLight: linear-gradient(0deg,rgba(147, 86, 220, 0.8),rgba(255, 121, 218, 0.8));
 
+//Ombre sombre ou clair pour le boutton explorer/commander
 $boxShadowDark: 0.25em 0.25em 0.25em rgba(0, 0, 0, .5);
 $boxShadowLight: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
 
+//Couleurs de fond des différentes pages
 $white: white;
 $mainColor:#f6f6f6;
 $colorLocation: #f3f3f3;
@@ -19,22 +27,20 @@ $colorExplore: #fafafa;
 $colorOperation: #f6f6f6;
 $colorRestaurant: #f6f6f6;
 
+//Fonds pour les éléments réutilisables 
 $footerBg: rgb(43, 43, 43);
 $headerBg: rgba(0, 0, 0, 0.25);
 $stepBg: rgb(173, 173, 173);
 
-$null: "null";
-$small: "small";
-$medium: "medium";
-$big: "big";
-
 $max-width: 1440px;
 
+//Variable pour le délai de menu
 $animation: menu;
 $animDuration: 1.5s;
 $totalMenus: 14;
 $delay: $animDuration / $totalMenus;
 
+//Variables pour les mixins marginPadding
 $allDirections: allDirection;
 $specificDirections: specificDirections;
 

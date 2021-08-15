@@ -2,6 +2,7 @@
 .menu {
     @include flexbox(row);
     @include widthHeight(100%);
+
     &__subheading {
       @extend %all-headings;
       @include font(normal, normal, 1em, 1, Roboto);
@@ -20,7 +21,7 @@
       @include marginPadding($allDirections, 1em 0, $allDirections, 0);
       @include widthHeight(100%, 100%);
   
-      @for $i from 0 to $totalMenus {
+      @for $i from 1 to $totalMenus {
         &:nth-child(#{$i}) {
           animation-delay: #{$i*2/$totalMenus}s;
           animation-direction: normal;
@@ -44,6 +45,7 @@
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation-fill-mode: both;
     transform: scale(0);
+    
     &__header {
       @extend %ellipsis;
       flex: 1;

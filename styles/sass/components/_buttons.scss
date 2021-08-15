@@ -9,8 +9,10 @@
   box-shadow: $boxShadowLight;
   text-align: center;
   @include font(normal, bold);
+
   &:hover {
     background: $linearGradientLight;
     box-shadow: $boxShadowDark;
   }
+  
 }

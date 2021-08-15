@@ -12,8 +12,10 @@
 
   &__homeLink {
     @include flexbox(row,normal,normal,baseline);
+    
     i {
       @include marginPadding($allDirections, 0, $allDirections, .5em);
     }
+
   }
 }

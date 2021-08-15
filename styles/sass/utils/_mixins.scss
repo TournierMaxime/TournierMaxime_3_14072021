@@ -1,5 +1,7 @@
 
-
+/*
+mixin qui regroupe les propriétés majeurs de flexbox
+*/
 @mixin flexbox($direction,$content: normal,$justify: normal,$items: normal,$wrap: wrap,$display: flex) {
   flex-direction: $direction;
   align-content: $content;
@@ -9,6 +11,12 @@
   display: $display;
 }
 
+/*
+Marges intérieurs et extérieurs 
+  - allDirections = marges globales ex : (margin:0;)
+  - specificDirections = marges spécifiques ex : (margin-left:0;)
+  - m-amount est la taille 
+*/
 @mixin marginPadding($m-direction:$allDirections, $m-amount:0, $p-direction:$allDirections, $p-amount:0) {
   @if $m-direction == $allDirections {
     margin: $m-amount;
@@ -21,7 +29,9 @@
     padding: $p-amount;
   }
 }
-
+/*
+Regroupe les border-radius top ou bottom
+*/
 @mixin borderRadiusTop($size) {
   border-top-left-radius: $size;
   border-top-right-radius: $size;
@@ -32,6 +42,10 @@
   border-bottom-right-radius: $size;
 }
 
+/*
+Mixin pour les titres ou paragraphes
+*/
+
 @mixin font($style: normal, $weight: normal, $size: 1em, $line-height: 1, $font-family: Roboto) {
   font-style: $style;
   font-weight: $weight;
@@ -39,12 +53,16 @@
   line-height: $line-height;
   font-family: $font-family;
 }
-
+/*
+Largeur et hauteur
+*/
 @mixin widthHeight($w, $h: auto) {
   width: $w;
   height: $h;
 }
-
+/*
+Positionnement d'un élément avec directions 
+*/
 @mixin positionElement($top:0em, $right:0em, $bottom:0em, $left:0em, $position:unset) {
   @if $top != 0em {
     top: $top;

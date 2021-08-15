@@ -1,5 +1,7 @@
 
-
+/*
+Tailles des différents titres
+*/
 %all-headings {
   $base-font-size: 0.8em;
   $heading-scale: 0.2;
@@ -10,7 +12,9 @@
     }
   }
 }
-
+/*
+Comportement du coeur lorsqu'il est plein
+*/
 %likeFillStatus {
   opacity: 1;
   background: linear-gradient(175deg, $primaryColor, $secondaryColor);
@@ -20,7 +24,9 @@
   transform: scale(1.2);
   transition: transform 0.5s ease;
 }
-
+/*
+Texte comportant des pointillés lorsqu'il est trop long
+*/
 %ellipsis {
   white-space: nowrap;
   text-overflow: ellipsis;
