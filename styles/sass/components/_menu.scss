@@ -22,7 +22,7 @@
   
       @for $i from 0 to $totalMenus {
         &:nth-child(#{$i}) {
-          animation-delay: #{$i/$totalMenus}s;
+          animation-delay: #{$i*2/$totalMenus}s;
           animation-direction: normal;
           animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
           animation-fill-mode: both;
@@ -40,7 +40,7 @@
     box-shadow: 0.25em 0.25em 1em rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
-    animation: itemAppear 0.1s;
+    animation: itemAppear 1s;
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation-fill-mode: both;
     transform: scale(0);
