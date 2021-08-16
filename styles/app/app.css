@@ -35,22 +35,22 @@ Positionnement d'un élément avec directions
 /*
 Tailles des différents titres
 */
-.menu__subheading h1, .mainMenu__header--heading h1, .restaurant .description__title h1, .operation__title h1, .headerIndex__title h1 {
+.menu__subheading h1, .mainMenu__header--heading h1, .restaurant .title h1, .operation__title h1, .headerIndex__title h1 {
   font-size: 1.8em;
 }
-.menu__subheading h2, .mainMenu__header--heading h2, .restaurant .description__title h2, .operation__title h2, .headerIndex__title h2 {
+.menu__subheading h2, .mainMenu__header--heading h2, .restaurant .title h2, .operation__title h2, .headerIndex__title h2 {
   font-size: 1.6em;
 }
-.menu__subheading h3, .mainMenu__header--heading h3, .restaurant .description__title h3, .operation__title h3, .headerIndex__title h3 {
+.menu__subheading h3, .mainMenu__header--heading h3, .restaurant .title h3, .operation__title h3, .headerIndex__title h3 {
   font-size: 1.4em;
 }
-.menu__subheading h4, .mainMenu__header--heading h4, .restaurant .description__title h4, .operation__title h4, .headerIndex__title h4 {
+.menu__subheading h4, .mainMenu__header--heading h4, .restaurant .title h4, .operation__title h4, .headerIndex__title h4 {
   font-size: 1.2em;
 }
-.menu__subheading h5, .mainMenu__header--heading h5, .restaurant .description__title h5, .operation__title h5, .headerIndex__title h5 {
+.menu__subheading h5, .mainMenu__header--heading h5, .restaurant .title h5, .operation__title h5, .headerIndex__title h5 {
   font-size: 1em;
 }
-.menu__subheading h6, .mainMenu__header--heading h6, .restaurant .description__title h6, .operation__title h6, .headerIndex__title h6 {
+.menu__subheading h6, .mainMenu__header--heading h6, .restaurant .title h6, .operation__title h6, .headerIndex__title h6 {
   font-size: 0.8em;
 }
 
@@ -362,7 +362,7 @@ a {
   margin: 1em 0;
   padding: 0;
 }
-.restaurant .description__title {
+.restaurant .title {
   margin: 0;
   padding: 0;
 }
@@ -446,7 +446,6 @@ a {
   content: "";
   position: absolute;
 }
-
 .likeEmpty:hover {
   display: none;
 }
@@ -457,7 +456,6 @@ a {
   opacity: 0;
   transform: scale(1);
 }
-
 .likeFill:hover {
   cursor: pointer;
 }
@@ -930,9 +928,6 @@ a {
   border-radius: 100px;
   margin: 0;
   padding: 0.2em;
-}
-.operation__steps--step::before a {
-  color: white;
 }
 .operation__steps--step span {
   font-style: normal;

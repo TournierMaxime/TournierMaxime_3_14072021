@@ -16,7 +16,8 @@
 
     &::before {
       @include widthHeight(1.5em, 1.5em);
-      @include backgroundAuto(#6100d8);
+      background-color: #6100d8;
+      color: white;
       @include flexbox(row, center, center);
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";

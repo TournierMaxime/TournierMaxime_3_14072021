@@ -1,34 +1,34 @@
 //Spinner page d'accueil
 .loader {
-    @include positionElement(0em,0em,0em,0em,fixed);
-    @include flexbox(row, center, center, center);
-    @include widthHeight(100%, 100%);
-    background-color: hsla(0, 0%, 100%, 0.9);
-    animation: loaderDisappear 0.01s;
-    animation-delay: 1.75s;
-    animation-fill-mode: both;
-    z-index: 10;
+  @include positionElement(0em,0em,0em,0em,fixed);
+  @include flexbox(row, center, center, center);
+  @include widthHeight(100%, 100%);
+  background-color: hsla(0, 0%, 100%, 0.9);
+  animation: loaderDisappear 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10;
 
-    &__item {  
-      animation: loader 1s linear;
-      transform-origin: 3em;
-      @include widthHeight(1em, 1em);
-      border-radius: 1em;
-      @include marginPadding($specificDirections, 0 0 0 -4em, $allDirections, 0);
+  &__item {  
+    animation: loader 1s linear;
+    transform-origin: 3em;
+    @include widthHeight(1em, 1em);
+    border-radius: 1em;
+    @include marginPadding($specificDirections, 0 0 0 -4em, $allDirections, 0);
 
   //On boucle sur la liste $colors
   
-      @for $i from 1 to length($colors) {
-        &:nth-child(#{length($colors)}n + #{$i}) {
+    @for $i from 1 to length($colors) {
+      &:nth-child(#{length($colors)}n + #{$i}) {
 
-          animation-delay: #{$i/length($colors)}s;
-          animation-direction: normal;
-          animation-fill-mode: forwards;
-          animation-timing-function: ease;
-          background: nth($colors, $i);
-          @include positionElement(0em,0em,0em,0em,absolute);
+        animation-delay: #{$i/length($colors)}s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        background: nth($colors, $i);
+        @include positionElement(0em,0em,0em,0em,absolute);
           
-        }
       }
     }
   }
+}

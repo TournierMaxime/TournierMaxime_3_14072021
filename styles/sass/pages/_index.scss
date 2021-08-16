@@ -56,7 +56,7 @@
     }
   }
 
-  .description__title {
+  .title {
     @extend %all-headings;
     @include marginPadding($allDirections, 0, $allDirections, 0);
   }
