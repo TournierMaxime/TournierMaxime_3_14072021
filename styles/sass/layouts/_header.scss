@@ -1,6 +1,6 @@
 //Layout réutilisable du header
 .headerIndex {
-  @include flexbox(column, center);
+  @include flexbox(row, center, center);
   @include font(normal,normal,1em,1,Shrikhand);
   text-align: center;
   @include positionElement(0em,0em,0em,0em,relative);
