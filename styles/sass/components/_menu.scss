@@ -1,7 +1,8 @@
 //Container menu
 .menu {
   @include flexbox(row);
-  @include widthHeight(100%);
+  @include widthHeight(95%);
+  @include marginPadding($allDirections, 0, $allDirections, 0 .5em);
 
   &__subheading {
     @extend %all-headings;
