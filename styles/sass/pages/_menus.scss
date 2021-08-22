@@ -2,19 +2,19 @@
   background-color: white;
 
   &__img {
-    @include widthHeight(100vw,25vh);
+    @include widthHeight(100%,35vh);
     object-fit: cover;
     max-height: 32em;
   }
 
   &__section {
     max-width: 768px;
-    @include marginPadding($specificDirections, 0 auto -3em auto, $allDirections, 1.5em);
+    @include marginPadding($specificDirections, 0 auto -3em auto, $allDirections, 0em);
     @include positionElement(-3em,0em,0em,0em,relative);
     @include backgroundAuto($mainColor);
     @include borderRadiusTop(2em);
     @include flexbox(column, normal, space-evenly);
-    @include widthHeight(85vw);
+    @include widthHeight(100vw);
   }
 
   &__header {
@@ -24,10 +24,11 @@
     &--heading {
       @extend %all-headings;
       @include font(normal, normal, 1.4em, 1, Shrikhand);
+      @include marginPadding($allDirections, 1em, $allDirections, 0em);
     }
 
     &--heart {
-      @include marginPadding($allDirections, 1em, $allDirections, 0);
+      @include marginPadding($allDirections, .2em, $specificDirections, 1em 2em 0 0);
     }
   }
 }
